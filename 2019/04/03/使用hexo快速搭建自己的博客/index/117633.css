@@ -1,0 +1,989 @@
+a:link {
+    color: #4183c4;
+    text-decoration: none;
+}
+a:visited {
+    color: #4183c4;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #E57019;
+}
+/* 反对 */
+.buryit
+{
+    display: none;
+}
+/* 推荐 */
+.diggit
+{
+    float: right;
+    display: none;
+}
+/* 不显示已推荐提示 */
+#digg_tips {
+    display: none;
+}
+
+div#blogTitle h2 a {
+    color: #FFF;
+}
+div#blogTitle h2 a:hover {
+    color: #E57019;
+}
+
+
+
+#blogTitle h2 {
+    margin-top: 1em;
+    font-size: 20px;
+}
+#blogTitle h1 a, #blogTitle h2 {
+    font-size: 24px;
+}
+#navList a {
+    font-size: 18px;
+}
+.postBody li, .postCon li {
+    margin-bottom: 0em;
+}
+#home {
+    width: 1360px;
+}
+#sideBar {
+    margin-left: 900px;
+    font-size: 18px;
+    font-family: 'Microsoft Yahei';
+}
+
+
+
+div#blog-calendar {
+    display: none !important;
+}
+div#sidebar_search {
+    display: none;
+}
+div#sidebar_shortcut {
+    display: none;
+}
+div#sidebar_toptags {
+    display: none;
+}
+div#sidebar_categories {
+    display: none;
+}
+
+/*cnzz站长统计*/
+div#cnzz_wrapper {
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+    z-index: 10;
+    background-color: #FFF;
+    padding: 5px 10px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    display: none;
+}
+.diggit {
+    position: fixed;
+    bottom: 6px;
+    right: 330px;
+}
+
+
+
+
+
+
+
+
+
+/* 设置盒模型 */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 设置整个滚动条的一些属性，宽度针对垂直滚动条，高度针对水平滚动条 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+/* 整个滚动条去除button剩下的部分 */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #d8dce5
+}
+/* 滚动条可拖拽的部分 */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #adadad;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #929292;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #666363;
+}
+::-webkit-scrollbar-corner {
+    background-color: #535353
+}
+::-webkit-scrollbar-resizer {
+    background-color: #ff6e00
+}
+/* 设置背景色和字体大小 */
+body {
+    background: #ebebeb;
+    font-size: 14px;
+}
+/* 最大的根容器 */
+#home {
+    width: auto;
+    margin: 0;
+}
+/* 头部 */
+#header {
+    position: relative;
+    height: 280px;
+    margin: 0;
+    background: #020031;
+    background: -moz-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,#020031),color-stop(100%,#6d3353));
+    background: -webkit-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: -o-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: -ms-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: linear-gradient(45deg,#020031 0,#6d3353 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#020031', endColorstr='#6d3353', GradientType=1);
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+    box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+}
+#header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(//static.bootcss.com/www/assets/img/bs-docs-masthead-pattern.png) repeat center center;
+    opacity: .4;
+}
+/* 中间大块 */
+#main {
+    min-width: 980px;
+    background: rgba(255, 255, 255, 0);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+#mainContent {
+    width: 100%;
+    margin-right: -300px;
+    float: left;
+    background: rgba(255, 255, 255, 0);
+}
+#mainContent .forFlow {
+    margin-right: 325px;
+    background: #FFF;
+}
+/* 侧边栏 */
+#sideBar {
+    margin-left: 0;
+    font-size: 16px;
+    font-family: 'Microsoft Yahei';
+    float: right;
+    width: 300px;
+    padding: 0px;
+    background: transparent;
+}
+
+
+/* 文章标题 */
+#topics .postTitle {
+    border: none;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.postTitle a:link, .postTitle a:visited, .postTitle a:active {
+    font-size: 32px;
+    font-family: 'Microsoft Yahei';
+    color: #E57019;
+}
+.postTitle a:hover {
+    color: #329B00;
+    text-decoration: underline;
+}
+
+/* 顶部header2个大文字 */
+div#blogTitle {
+    position: relative;
+    z-index: 2;
+    padding-top: 30px;
+}
+#blogTitle h1 {
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 60px;
+}
+#blogTitle h2 {
+    width: 100%;
+    margin: 0px 0;
+    text-align: center;
+    font-size: 22px !important;
+}
+#blogTitle h1 a, #blogTitle h2 {
+    font-size: inherit;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px #1E1E1E;
+}
+/* 顶部导航 */
+#navigator {
+    background-color: rgba(18, 126, 186, 0);
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    margin-top: 0px;
+}
+/* 顶部导航文字 */
+#navList a {
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #000 !important;
+    margin-top: 14px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+#navList a:hover {
+    text-decoration: none;
+    color: #FF6002;
+}
+/* 中间大块 */
+#topics {
+    padding: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 侧边栏 */
+#sideBarMain {
+    margin-top: -10px;
+}
+.newsItem {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    border: none;
+    background: #FFF;
+}
+.newsItem .catListTitle {
+    background: rgba(0, 0, 0, 0);
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    border-bottom: solid 1px #E3E3E3 !important;
+    margin: 0;
+}
+.catListTitle:after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: #4AA3E3;
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+}
+/* 头像 */
+#blog-news {
+    margin-top: 16px;
+}
+#blog-news a {
+    margin: 0 4px;
+}
+div#blog-news > img {
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #838383;
+    margin-bottom: 10px;
+}
+.sidebar-block {
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    border: none;
+    background: #FFF;
+    border-radius: 0;
+}
+/* 侧边栏几个大块 */
+.catListTitle {
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    border: none !important;
+    border-bottom: solid 1px #E3E3E3 !important;
+    margin: 0;
+    padding-bottom: 8px;
+    background: rgba(0, 0, 0, 0) !important;
+    padding-left: 0 !important;
+}
+#sideBarMain ul {
+    line-height: 1.3em;
+    padding-left: 0em;
+}
+/* 不显示最新评论 */
+#sidebar_recentcomments {
+    display: none;
+}
+/* 修改目录样式 */
+.markdown-toc ol {
+    padding-left: 18px !important;
+}
+.markdown-nav-sidebar:before {
+    left: -7px !important;
+}
+/* 个性签名 */
+#MySignature {
+    box-shadow: 10px 1px 10px #989898;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #FFF;
+    font-size: 16px;
+    font-family: 'Microsoft Yahei';
+    border-left: solid 3px #3199E4;
+    background: #F3F3F3;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 10px;
+}
+#MySignature a {
+    text-decoration: none;
+}
+#MySignature a:hover {
+    text-decoration: underline;
+    color: #f60;
+}
+/* 文章底部的分割线颜色 */
+.postBody {
+    border-bottom: 1px solid #D7D7D7;
+}
+
+
+
+/* 底部标签 */
+#EntryTag a {
+    font-size: 14px;
+    text-decoration: none;
+}
+#EntryTag a:hover {
+    text-decoration: underline;
+}
+/* 关注收藏等几个按钮 */
+#green_channel a {
+    background: none;
+    border-radius: 3px;
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 14px;
+    box-shadow: none;
+}
+/* 禁用下划线 */
+.postBody a:link, .postBody a:visited, .postBody a:active {
+    text-decoration: none;
+}
+
+/* 上一篇下一篇 */
+#post_next_prev {
+    font-size: 14px;
+    color: #535353;
+}
+
+
+
+/* 评论开始 */
+/* 用户头像 */
+.blog_comment_body > img.user-avatar {
+    position: absolute;
+    left: -72px;
+    top: 0px;
+    width: 48px;
+    height: 48px;
+}
+.myself .blog_comment_body > img.user-avatar {
+    left: initial;
+    right: -72px;
+}
+#blog-comments-placeholder {
+    border: solid 1px #CCC;
+    margin: 10px 30px;
+    border-radius: 5px;
+}
+div#comments_pager_top {
+    display: none;
+}
+#blog-comments-placeholder > br {
+    display: none;
+}
+/* 评论列表 */
+.feedback_area_title {
+    margin: 0px;
+    background: #EDEDED;
+    padding: 10px 10px;
+    color: #272727;
+    font-weight: normal;
+    border-bottom: solid 1px #ccc;
+}
+.feedbackManage {
+    width: 130px;
+    display: none;
+    position: absolute;
+    right: 120px;
+    top: 0px;
+}
+.feedbackItem:hover .feedbackManage {
+    display: block;
+}
+/* 所有评论里面的A标签 */
+.feedbackItem a {
+    color: #989898 !important;
+    transition: all .2s;
+}
+.feedbackItem a:hover {
+    color: #FF661C !important;
+    text-decoration: underline;
+}
+/* 评论分割线 */
+.feedbackCon {
+    border-bottom: solid 1px #E4E4E4;
+    background: none;
+    clear: both;
+}
+/* 楼层 */
+.feedbackListSubtitle a.layer {
+    background: #B2E866;
+    color: #414141 !important;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-right: 4px;
+    /*display: none;*/
+}
+/* 评论人 */
+.feedbackListSubtitle a[target="_blank"] {
+    color: #FF6969 !important;
+}
+/* 评论时间 */
+.feedbackItem .comment_date {
+    color: #BCBCBC;
+    margin-right: 4px;
+}
+/* 楼主颜色 */
+.feedbackListSubtitle {
+    color: #0AB300;
+}
+/* 支持与反对 */
+.comment_vote {
+    float: right;
+    margin-top: -34px;
+    display: none;
+}
+/* 鼠标经过时显示支持与反对 */
+.feedbackItem:hover .comment_vote {
+    display: block;
+}
+/* 评论内容颜色 */
+.feedbackItem {
+    color: #464646;
+    position: relative;
+}
+/* 评论背景色 */
+.blog_comment_body {
+    background: #B2E866;
+    float: left;
+    padding: 14px 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: visible;
+    margin-left: 33px;
+    max-width: 700px;
+}
+/* 评论三角形 */
+.blog_comment_body:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -17px;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-right: solid 18px #B2E866;
+    border-top: solid 6px rgba(0, 0, 0, 0);
+    border-bottom: solid 10px rgba(0, 0, 0, 0);
+}
+/* 评论头像 */
+.blog_comment_body:after {
+    content: attr(data-louceng);
+    display: none;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: -72px;
+    top: 0px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.42);
+    font-family: 'Microsoft Yahei';
+    background: linear-gradient(top , rgb(116, 218, 45) 12% , rgb(135, 255, 75) 35% , rgb(71, 179, 28) 86%);
+    background: -o-linear-gradient(top , rgb(116, 218, 45) 12% , rgb(135, 255, 75) 35% , rgb(71, 179, 28) 86%);
+    background: -ms-linear-gradient(top , rgb(116, 218, 45) 12% , rgb(135, 255, 75) 35% , rgb(71, 179, 28) 86%);
+    background: -moz-linear-gradient(top , rgb(116, 218, 45) 12% , rgb(135, 255, 75) 35% , rgb(71, 179, 28) 86%);
+    background: -webkit-linear-gradient(top , #74DA2D 12% , #87FF4B 35% , #47B31C 86%);
+    background-size: contain;
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+0) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_00.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+1) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_01.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+2) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_02.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+3) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_03.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+4) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_04.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+5) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_05.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+6) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_06.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+7) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_07.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+8) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_08.bmp);
+}
+#blog-comments-placeholder .feedbackItem:nth-child(10n+9) .blog_comment_body:after {
+    background-image: url(//files.cnblogs.com/files/liuxianan/auto_avatar_09.bmp);
+}
+
+
+/* 清除浮动 */
+.feedbackCon:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 引用边框 */
+.comment_quote {
+    border: 1px solid #63921F;
+    border-radius: 3px;
+}
+/* 隐藏小图标 */
+.feedbackItem .sendMsg2This {
+    display: none;
+}
+
+/* 楼主自己的样式 */
+.myself .blog_comment_body {
+    float: right;
+    margin-right: 72px;
+    background: #98DDFF;
+}
+.myself .blog_comment_body:before {
+    right: -17px;
+    left: initial;
+    border-left: solid 18px #98DDFF;
+    border-right: none;
+}
+.myself .blog_comment_body:after {
+    content: '';
+    display: none;
+    width: 48px;
+    height: 48px;
+    background-image: url(//pic.cnblogs.com/avatar/352797/20160108090502.png) !important;
+    background-size: contain;
+    position: absolute;
+    right: -72px;
+    top: 0px;
+    left: initial;
+}
+.myself .comment_vote {
+    float: left;
+    margin-left: -40px;
+}
+.myself .comment_quote {
+    border: 1px solid #4491B7;
+}
+.myself .feedbackListSubtitle {
+    float: right;
+    margin-right: 10px;
+}
+.myself .feedbackListSubtitle a.layer {
+    display: inline-block;
+}
+.myself .feedbackManage {
+    left: 66px;
+    right: initial;
+    top: 5px;
+}
+/* 评论结束 */
+
+
+
+
+/* 评论框 */
+div.commentform textarea.comment_textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    width: 90%;
+    padding: 10px;
+}
+div.commentform textarea.comment_textarea:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+/* 提交评论按钮 */
+#btn_comment_submit {
+    border: solid 1px #39f;
+    padding: 8px 20px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    background-color: #39f;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#btn_comment_submit:hover {
+    background-color: #017FFF;
+    border-color: #0481FF;
+}
+#comment_form_container {
+    padding-bottom: 20px;
+}
+/* 广告分割线 */
+.ad_text_commentbox {
+    margin-left: -30px;
+    margin-right: -5px;
+    background: #EBEBEB;
+    height: 160px;
+}
+.ad_text_commentbox:after {
+    content: '~~~~~~~~~~~~~~~~~~~ 华丽的分割线 ~~~~~~~~~~~~~~~~~~~';
+    text-align: center;
+    display: block;
+    line-height: 160px;
+    color: #F44336;
+    font-size: 20px;
+    font-family: 'Microsoft Yahei';
+    text-shadow: 1px 1px 1px #FFF;
+}
+
+
+
+.catListBlogRank ul {
+    margin: 10px 0;
+}
+.cnblogs-markdown p > iframe {
+    border: solid 1px #D2D2D2 !important;
+    border-radius: 5px;
+}
+#cnblogs_post_body table {
+    margin-top: 20px;
+}
+#cnblogs_post_body table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+#cnblogs_post_body table td{
+    padding: 6px;
+}
+
+/* 博客列表页 */
+.day {
+    margin-bottom: -10px;
+    margin-top: 0;
+}
+.day .postTitle {
+    padding: 4px 100px 6px 10px;
+}
+.day .postTitle a {
+    font-size: 24px;
+}
+/* 分页 */
+.pager {
+    font-size: 16px;
+}
+.pager a {
+    padding: 4px 10px;
+    background: #E7E7E7;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    color: #4F4F4F;
+}
+.pager a:hover {
+    background: #1FA6E6;
+    color: #FFF;
+    border: solid 1px #1B86B9;
+}
+/* 底部样式 */
+#footer {
+    color: #373737;
+}
+.topicListFooter {
+    padding-bottom: 10px;
+}
+/* 隐藏顶部的分页按钮  */
+div#homepage_top_pager {
+    display: none;
+}
+
+/* 快速评论 */
+a.fast-comment {
+    position: fixed;
+    right: 190px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    color: #565656;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+}
+
+
+
+/* markdown 样式开始 */
+#cnblogs_post_body ol
+ {
+     border: 1px dotted #000066;
+     line-height: 150%;
+     word-break: break-word;
+     font-family: Consolas, Verdana !important;
+     border-radius: 5px;
+     width: 90%;
+     background-color: #E3E3FF;
+     list-style-position: outside;
+     margin-left: 0px;
+ }
+ #cnblogs_post_body ol font
+ {
+     font-size: 12px !important;
+ }
+ #cnblogs_post_body ol li
+ {
+     background-color: #fff;
+     padding-left: 5px;
+     border-left: 1px solid #8A8AFF;
+     margin-left: 5px !important;
+ }
+ #cnblogs_post_body ol li:nth-child(even)
+ {
+     background-color: #f5f5f5;
+ }
+
+#cnblogs_post_body {
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+}
+#cnblogs_post_body h1 {
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #3199E4;
+    border-radius: 5px;
+    color: #FFF;
+    padding-left: 8px;
+    text-shadow: 1px 1px 1px #000;
+}
+/* 修改引用样式 */
+.cnblogs-markdown blockquote {
+    padding: 10px 15px;
+    color: #747474;
+    border-left: 2px solid #41ABF7;
+    background: #F7F7F7;
+}
+/* 覆盖H2的样式 */
+.cnblogs-markdown h2 {
+    border-bottom: 1px solid #41ABF7;
+    color: #3199E4;
+}
+/* 给ul和ol添加简单的背景色 */
+#cnblogs_post_body ul, #cnblogs_post_body ol {
+    border-left: solid 2px #41ABF7;
+    background: #FAFAFA;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0;
+    padding-left: 30px;
+}
+/* 使用CSS给h1添加索引，h2-h6无法通过CSS生成，只能交由JS来处理 */
+.cnblogs-markdown h1 {
+    counter-increment: markdown-body-h1;
+}
+.cnblogs-markdown h1:before {
+    content: counter(markdown-body-h1) ". ";
+}
+/* code样式 */
+.cnblogs-markdown p code, .cnblogs-markdown ul li code {
+    border: none !important;
+    line-height: 18px;
+    text-indent: 0px;
+    padding: 0.2em 0.3em!important;
+    margin: 0 5px;
+    font-size: 100% !important;
+    color: #c7254e;
+    background: #f9f2f4  !important;
+    margin: 0 2px;
+    font-weight: normal;
+}
+.cnblogs-markdown a {
+    color: #4183c4;
+    text-decoration: none;
+    margin: 0 4px;
+}
+.cnblogs-markdown a:hover, .cnblogs-markdown a:active {
+    text-decoration: underline;
+    color: #E57019;
+}
+#cnblogs_post_body p {
+    text-indent: 2em;
+}
+#cnblogs_post_body blockquote > p:first-child {
+    margin: 0;
+}
+#cnblogs_post_body blockquote > p:last-child {
+    margin: 0;
+}
+#cnblogs_post_body img {
+    max-width: 100%;
+    height: auto !important;
+}
+/* markdown 样式结束*/
+
+
+[data-lazy-src] {
+    background: #e6e6e6;
+}
+
+
+
+
+
+
+
+/*
+ 代码高亮开始，使用了一个叫Monokai Sublime的黑色主题皮肤，直接拿过来还不行，有一些样式冲突，还要自己稍微改一些地方
+Monokai Sublime style. Derived from Monokai by noformnocontent //nn.mit-license.org/
+*/
+pre {
+/*控制代码不换行*/
+    white-space: pre;
+    word-wrap: normal;
+}
+.cnblogs-markdown .hljs {
+    display: block;
+    overflow-x: auto;
+    background: #272822 !important;
+    color: #FFF;
+    white-space: pre;
+    word-break: normal;
+    padding: 10px 15px !important;
+    font-size: 16px!important;
+    max-height: 720px;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+/*黑色主题皮肤结束*/
