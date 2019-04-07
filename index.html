@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>前端小菜鸡</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta property="og:type" content="website">
+<meta property="og:title" content="前端小菜鸡">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="前端小菜鸡">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端小菜鸡">
+  
+    <link rel="alternate" href="/atom.xml" title="前端小菜鸡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main">
+  
+    <article id="post-利用hexo-快速搭建自己的博客" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/03/利用hexo-快速搭建自己的博客/">利用hexo 快速搭建自己的博客</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/04/03/利用hexo-快速搭建自己的博客/" class="article-date">
+  <time datetime="2019-04-03T03:05:22.000Z" itemprop="datePublished">2019-04-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>今天来分享下怎么利用github来搭建自己的技术博客；</p>
+<p>为什么一定要github pages来搭建？</p>
+<p>使用github pages服务搭建博客的好处有： </p>
+<ol>
+<li>全是静态文件，访问速度快；</li>
+<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
+<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
+<li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li>
+<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
+<li>等等；</li>
+</ol>
+<h1 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2.准备工作"></a>2.准备工作</h1><p>在开始一切之前，你必须已经：</p>
+<ul>
+<li>有一个github账号，没有的话去注册一个；</li>
+<li>安装了node.js、npm，并了解相关基础知识；</li>
+<li>安装了git for windows（或者其它git客户端）</li>
+</ul>
+<p>本文所使用的环境： </p>
+<p>​    </p>
+<ul>
+<li>Windows</li>
+<li><a href="mailto:node.js@5.5.0" target="_blank" rel="noopener">node.js@5.5.0</a></li>
+<li><a href="mailto:git@1.9.2" target="_blank" rel="noopener">git@1.9.2</a></li>
+<li><a href="mailto:hexo@3.2.2" target="_blank" rel="noopener">hexo@3.2.2</a></li>
+</ul>
+<h1 id="3-搭建github仓库"><a href="#3-搭建github仓库" class="headerlink" title="3.搭建github仓库"></a>3.搭建github仓库</h1><p>github账号的注册略过，能看到这里的人不需要讲的对吗</p>
+<p>新建一个名为<code>**你的用户名.github.io**</code>的仓库，比如说，如果你的github用户名是test，那么你就新建<code>test.github.io</code>的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 <a href="http://test.github.io" target="_blank" rel="noopener">http://test.github.io</a> 了，是不是很方便？</p>
+<p>由此可见，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
+<p>几个注意的地方：</p>
+<p>​    </p>
+<ol>
+<li>注册的邮箱一定要验证，否则不会成功；</li>
+<li>仓库名字必须是：<code>username.github.io</code>，其中<code>username</code>是你的用户名；</li>
+</ol>
+<p>创建成功后，默认会在你这个仓库里生成一些示例页面，以后你的网站所有代码都是放在这个仓库里啦。 </p>
+<h1 id="4-绑定域名"><a href="#4-绑定域名" class="headerlink" title="4.绑定域名"></a>4.绑定域名</h1><p>当然，你不绑定域名肯定也是可以的，就用默认的 <code>xxx.github.io</code> 来访问，如果你想更个性一点，想拥有一个属于自己的域名，那也是OK的。</p>
+<p>首先你要注册一个域名，域名注册以前总是推荐去<code>godaddy</code>，现在觉得其实国内的阿里云也挺不错的，价格也不贵，毕竟是大公司，放心！</p>
+<p>绑定域名分2种情况：带www和不带www的。</p>
+<p>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下<code>你的用户名.github.io</code>的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向<code>你的用户名.github.io</code>，这样可以保证无论是否添加www都可以访问</p>
+<p>然后到你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好，因为经测试： </p>
+<ul>
+<li>如果你填写的是没有www的，比如 mygit.me，那么无论是访问 <a href="http://www.mygit.me" target="_blank" rel="noopener">http://www.mygit.me</a> 还是 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a> ，都会自动跳转到 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a></li>
+<li>如果你填写的是带www的，比如 <a href="http://www.mygit.me" target="_blank" rel="noopener">www.mygit.me</a> ，那么无论是访问 <a href="http://www.mygit.me" target="_blank" rel="noopener">http://www.mygit.me</a> 还是 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a> ，都会自动跳转到 <a href="http://www.mygit.me" target="_blank" rel="noopener">http://www.mygit.me</a></li>
+<li>如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 <a href="http://abc.mygit.me" target="_blank" rel="noopener">http://abc.mygit.me</a> 没问题，但是访问 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a> ，不会自动跳转到 <a href="http://abc.mygit.me" target="_blank" rel="noopener">http://abc.mygit.me</a></li>
+</ul>
+<p>另外说一句，在你绑定了新域名之后，原来的<code>你的用户名.github.io</code>并没有失效，而是会自动跳转到你的新域名。 </p>
+<h1 id="5-配置SSH-key"><a href="#5-配置SSH-key" class="headerlink" title="5.配置SSH key"></a>5.配置SSH key</h1><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。 </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>如果提示：No such file or directory 说明你是第一次使用git。 </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key： </p>
+<p>将刚复制的内容粘贴到key那里，title随便填，保存。 </p>
+<h2 id="测试是否成功代码如下"><a href="#测试是否成功代码如下" class="headerlink" title="测试是否成功代码如下"></a>测试是否成功代码如下</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure></div>
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>，输入yes，然后会看到： </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi liuxianan! You've successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></div>
+<p>看到这个信息说明SSH已配置成功！</p>
+<p>此时你还需要配置：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"liuxianan"</span><span class="comment">// 你的github用户名，非昵称</span></span><br><span class="line">$ git config --global user.email  <span class="string">"xxx@qq.com"</span><span class="comment">// 填写你的github注册邮箱</span></span><br></pre></td></tr></table></figure></div>
+<h1 id="6-使用hexo写博客"><a href="#6-使用hexo写博客" class="headerlink" title="6.使用hexo写博客"></a>6.使用hexo写博客</h1><p>Hexo是一个简单、快速、强大的基于 Github Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
+<p>官网： <a href="http://hexo.io" target="_blank" rel="noopener">http://hexo.io</a><br>github: <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理:"></a>原理:</h2><p>​    由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，假如每次写完一篇文章都要手动更新博文目录和相关链接信息，相信谁都会疯掉，所以hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。 </p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项:"></a>注意事项:</h2><ol>
+<li>很多命令既可以用Windows的cmd来完成，也可以使用git bash来完成，但是部分命令会有一些问题，为避免不必要的问题，建议全部使用git bash来执行；</li>
+<li>hexo不同版本差别比较大，网上很多文章的配置信息都是基于2.x的，所以注意不要被误导；</li>
+<li>hexo有2种<code>_config.yml</code>文件，一个是根目录下的全局的<code>_config.yml</code>，一个是各个<code>theme</code>下的；</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure></div>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化:"></a>初始化:</h2><p>​    在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是<code>F:\Workspaces\hexo</code>，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。 </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /f/Workspaces/hexo/</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></div>
+<p>hexo会自动下载一些文件到这个目录，包括node_modules </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g # 生成静态页面</span><br><span class="line">$ hexo s # 启动本地服务</span><br></pre></td></tr></table></figure></div>
+<p>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的： </p>
+<p><code>hexo s</code>是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：</p>
+<p><a href="http://blog.liuxianan.com/windows-port-bind.html" target="_blank" rel="noopener">http://blog.liuxianan.com/windows-port-bind.html</a></p>
+<h2 id="修改主题："><a href="#修改主题：" class="headerlink" title="修改主题："></a>修改主题：</h2><p>既然默认主题很丑，那我们别的不做，首先来替换一个好看点的主题。这是 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方主题</a>。</p>
+<p>个人比较喜欢的2个主题：<a href="https://github.com/pinggod/hexo-theme-jekyll" target="_blank" rel="noopener">hexo-theme-jekyll</a> 和 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">hexo-theme-yilia</a>。</p>
+<p>首先下载这个主题：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /f/Workspaces/hexo/</span><br><span class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure></div>
+<p>修改<code>_config.yml</code>中的<code>theme: landscape</code>改为<code>theme: yilia</code>，然后重新执行<code>hexo g</code>来重新生成。</p>
+<p>如果出现一些莫名其妙的问题，可以先执行<code>hexo clean</code>来清理一下public的内容，然后再来重新生成和发布。</p>
+<h2 id="上传之前"><a href="#上传之前" class="headerlink" title="上传之前:"></a>上传之前:</h2><p>​    在上传代码到github之前，一定要记得先把你以前所有代码下载下来（虽然github有版本管理，但备份一下总是好的），因为从hexo提交代码时会把你以前的所有代码都删掉。 </p>
+<h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><p>​    如果你一切都配置好了，发布上传很容易，一句<code>hexo d</code>就搞定，当然关键还是你要把所有东西配置好。</p>
+<p>首先，<code>ssh key</code>肯定要配置好。</p>
+<p>其次，配置<code>_config.yml</code>中有关deploy的部分：</p>
+<p>正确写法：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></div>
+<h2 id="保留CNAME、README-md等文件"><a href="#保留CNAME、README-md等文件" class="headerlink" title="保留CNAME、README.md等文件"></a>保留CNAME、README.md等文件</h2><p>提交之后网页上一看，发现以前其它代码都没了，此时不要慌，一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录的： </p>
+<p>由于hexo默认会把所有md文件都转换成html，包括README.md，所有需要每次生成之后、上传之前，手动将README.md复制到public目录，并删除README.html。 </p>
+<h2 id="常用的hexo命令"><a href="#常用的hexo命令" class="headerlink" title="常用的hexo命令"></a>常用的hexo命令</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#部署到GitHub</span></span><br><span class="line">hexo help  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure></div>
+<h2 id="组合命令："><a href="#组合命令：" class="headerlink" title="组合命令："></a>组合命令：</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>这里面都是一些全局配置，每个参数的意思都比较简单明了，所以就不作详细介绍了。</p>
+<p>需要特别注意的地方是，冒号后面必须有一个空格，否则可能会出问题。</p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>定位到我们的hexo根目录，执行命令： </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'my-first-blog'</span></span><br></pre></td></tr></table></figure></div>
+<p>hexo会帮我们在<code>_posts</code>下生成相关md文件</p>
+<p>我们只需要打开这个文件就可以开始写博客了，默认生成如下内容： </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName #文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line">description: 附加一段文章摘要，字数最好在<span class="number">140</span>字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ hexo new page <span class="string">'postName'</span> <span class="comment">#生成一个文章</span></span><br><span class="line"></span><br><span class="line">$ hexo new <span class="string">'postName'</span> <span class="comment">#生成一个页面不会作为文章加载</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="如何让博文列表不显示全部内容"><a href="#如何让博文列表不显示全部内容" class="headerlink" title="如何让博文列表不显示全部内容"></a>如何让博文列表不显示全部内容</h3><p>默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？</p>
+<p>答案是在合适的位置加上<code>&lt;!--more--&gt;</code>即可，例如：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="MARKDOWN"><figure class="iseeu highlight /markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 前言</span></span><br><span class="line"></span><br><span class="line">使用github pages服务搭建博客的好处有：</span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>全是静态文件，访问速度快；</span><br><span class="line"><span class="bullet">2. </span>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</span><br><span class="line"><span class="bullet">3. </span>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!--more--&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="bullet">4. </span>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</span><br><span class="line"><span class="bullet">5. </span>博客内容可以轻松打包、转移、发布到其它平台；</span><br><span class="line"><span class="bullet">6. </span>等等；</span><br></pre></td></tr></table></figure></div>
+<p>至此文章结束，另外如果有更多更好玩的玩法欢迎分享</p>
+<h1 id="下面是关于根目录下面的config-配置文件的详解"><a href="#下面是关于根目录下面的config-配置文件的详解" class="headerlink" title="下面是关于根目录下面的config 配置文件的详解:"></a>下面是关于根目录下面的config 配置文件的详解:</h1><p>网站相关的:</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">参数              描述</span><br><span class="line">title           网站标题</span><br><span class="line">subtitle        网站副标题</span><br><span class="line">description     网站描述</span><br><span class="line">author          您的名字</span><br><span class="line">language        网站使用的语言</span><br><span class="line">timezone        网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</span><br></pre></td></tr></table></figure></div>
+<p>网址相关的:</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">参数                 描述                       默认值</span><br><span class="line">url                  网址     </span><br><span class="line">root               网站根目录    </span><br><span class="line">permalink         文章的永久链接格式      :year/:month/:day/:title/</span><br><span class="line">permalink_defaults  永久链接中各部分的默认值</span><br></pre></td></tr></table></figure></div>
+<p>目录:</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">参数                 描述   </span><br><span class="line">source_dir       资源文件夹，这个文件夹用来存放内容。     </span><br><span class="line">public_dir       公共文件夹，这个文件夹用于存放生成的站点文件。 </span><br><span class="line">tag_dir          标签文件夹  </span><br><span class="line">archive_dir      归档文件夹  </span><br><span class="line">category_dir     分类文件夹  </span><br><span class="line">code_dir         Include code 文件夹   </span><br><span class="line">i18n_dir         国际化（i18n）文件夹   </span><br><span class="line">skip_render      跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。</span><br></pre></td></tr></table></figure></div>
+<p>文章:</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">参数                  描述  </span><br><span class="line">new_post_name       新文章的文件名称    </span><br><span class="line">default_layout      预设布局    </span><br><span class="line">auto_spacing        在中文和英文之间加入空格    </span><br><span class="line">titlecase           把标题转换为 title case   </span><br><span class="line">external_link       在新标签中打开链接 </span><br><span class="line">filename_case       把文件名称转换为 (1) 小写或 (2) 大写     </span><br><span class="line">render_drafts       显示草稿    </span><br><span class="line">post_asset_folder   启动 Asset 文件夹    </span><br><span class="line">relative_link       把链接改为与根目录的相对位址  </span><br><span class="line">future              显示未来的文章     </span><br><span class="line">highlight           代码块的设置</span><br></pre></td></tr></table></figure></div>
+<p>​                                                    2019-4-3</p>
+<p>​                                                    bundy</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-自己的笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/03/自己的笔记/">自己的笔记</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/04/03/自己的笔记/" class="article-date">
+  <time datetime="2019-04-03T02:54:10.000Z" itemprop="datePublished">2019-04-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="JavaScript的作用域"><a href="#JavaScript的作用域" class="headerlink" title="JavaScript的作用域"></a>JavaScript的作用域</h1><p>全局变量：如果这个声明变量是用var进行声明的，那么这个变量就是全局变量。注意以下：</p>
+<p>1.全局变量在任何地方都可以调用。</p>
+<p>2.全局变量只要不关闭客户端就会一直存在，占用内存。</p>
+<p>3.全局变量是不能被删除的</p>
+<p>4.除了函数以内定义的变量都是全局变量</p>
+<p>5.全局变量可以作用在任何位置，作用的位置叫做作用域</p>
+<p>局部变量：在函数体内声明的变量就是局部变量，在函数体外无法调用。局部变量只能作用在花括号内，只作用在这一片，这一片是局部变量的作用域。</p>
+<p>隐式全局变量：声明的变量没有var就叫做隐式全局变量。隐式全局变量是可以通过delete进行删除的。</p>
+<h1 id="javaScript的作用域链"><a href="#javaScript的作用域链" class="headerlink" title="javaScript的作用域链"></a>javaScript的作用域链</h1><p>作用域可以嵌套使用，在嵌套过程中，如果不调用则没有值，如果多个嵌套函数同时调用，以标准流的形式来执行。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">f3</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">f4</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">            f4();</span><br><span class="line">        &#125;</span><br><span class="line">        f3();</span><br><span class="line">    &#125;</span><br><span class="line">    f2();</span><br><span class="line">&#125;f1();</span><br></pre></td></tr></table></figure></div>
+<p>在一个函数使用一个变量，先在该函数体内进行搜索，如果搜索不到则向外面继续寻找这个变量，一直到找到全局作用域，如果最终没有找到，则会报underfined。</p>
+<h1 id="javaScript预解析"><a href="#javaScript预解析" class="headerlink" title="javaScript预解析"></a>javaScript预解析</h1><p>  javaSCript代码的执行是由浏览器的解析器来执行的，javaScript解析器在执行代码的时候，分为两个过程：预解析和代码执行过程</p>
+<p> 预解析过程：</p>
+<p>1.把变量的声明提升到当前作用域的最前面，只会提升变量，不会提升赋值。</p>
+<p>2.把函数的声明提升到当前作用域的最前面，只会提升声明，不会提升调用。</p>
+<p>3.先提升var 再提升function 。</p>
+<p>4.隐式全局变量是可以通过预解析来进行访问的。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">f1();</span><br><span class="line">   <span class="built_in">console</span>.log(c);<span class="comment">//9</span></span><br><span class="line">   <span class="built_in">console</span>.log(b);<span class="comment">//9</span></span><br><span class="line">   <span class="built_in">console</span>.log(a);<span class="comment">//报错</span></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> a=b=c=<span class="number">9</span>;</span><br><span class="line">       <span class="built_in">console</span>.log(a);<span class="comment">//9</span></span><br><span class="line">       <span class="built_in">console</span>.log(b);<span class="comment">//9</span></span><br><span class="line">       <span class="built_in">console</span>.log(c);<span class="comment">//9</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></div>
+<p>上图代码中上面第三个a报错的原因是因为在函数中进行了声明，所以它变成了局部变量，而预解析可以访问隐式全局变量，但是不能访问局部变量所以结果为报错。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f1();</span><br><span class="line"> <span class="keyword">var</span> f1=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(num)</span><br><span class="line">     <span class="keyword">var</span> num=<span class="number">10</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></div>
+<p>上面的案例中var f1只是一种假象，在面试的过程中会有这样的题目来挖坑，这样的预解析是错误的，是无法调用的方法。</p>
+<p>作业：百度MDN去查找Date string Array的方法。</p>
+<h1 id="代码的重复利用（函数）"><a href="#代码的重复利用（函数）" class="headerlink" title="代码的重复利用（函数）"></a>代码的重复利用（函数）</h1><p>函数的参数：</p>
+<p>1.形参：函数定义的时候，函数后面小括号的变量叫做形参</p>
+<p>2.实参：函数调用的时候，函数后面的小括号的变量叫做实参</p>
+<p>返回值：</p>
+<p>函数中油return，函数有返回值</p>
+<p>函数中没有return，函数没有返回值，</p>
+<p>函数没有明确返回值：函数中没有return 或者return后面没有任何内容。</p>
+<p>如果一个函数中没有明确的返回值接受这个函数，结果是underfined</p>
+<p>函数又分为：</p>
+<p>1.无参数五返回值的函数</p>
+<p>2.无参数有返回值的函数</p>
+<p>3.有参数无返回值的函数</p>
+<p>4.有参数有返回值的函数</p>
+<p>arguments—-&gt;可以获取函数调用时，传入的实参个数</p>
+<p>arguments是一个对象，是一个伪数组</p>
+<p>arguments.length—-&gt;是实参的个数</p>
+<p>arguments[索引]——-&gt;实参的值</p>
+<h1 id="关于tab选项卡的总结（用js做）"><a href="#关于tab选项卡的总结（用js做）" class="headerlink" title="关于tab选项卡的总结（用js做）"></a>关于tab选项卡的总结（用js做）</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//获取大盒子的元素</span></span><br><span class="line">    <span class="keyword">var</span> odiv=<span class="built_in">document</span>.getElementById(<span class="string">'tabControl'</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//获取按钮的元素</span></span><br><span class="line">    <span class="keyword">var</span> btn=odiv.getElementsByTagName(<span class="string">'input'</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//获取类名为coder的子盒子，注意在使用classname时，需要注意是否是多类名元素</span></span><br><span class="line">    <span class="keyword">var</span> coder=<span class="built_in">document</span>.getElementsByClassName(<span class="string">'coder'</span>);</span><br><span class="line">   </span><br><span class="line">   <span class="comment">//遍历按钮，并且给按钮添加一个index的样式，index是层叠样式，js通过这个来判断元素在哪一层</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;btn.length;i++)&#123;</span><br><span class="line">        btn[i].index=i;</span><br><span class="line">     </span><br><span class="line">       <span class="comment">//在鼠标经过按钮的时候给按钮修改类名，类名是提前做好的样式</span></span><br><span class="line">        btn[i].onmousemove=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         </span><br><span class="line">           <span class="comment">//在鼠标离开按钮的时候清除样式并把下面的盒子样式改变</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;btn.length;i++)&#123;</span><br><span class="line">                btn[i].className=<span class="string">""</span>;</span><br><span class="line">                coder[i].style.display=<span class="string">'none'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">         </span><br><span class="line">            <span class="comment">//使用this绑定btn的类名，使鼠标经过按钮的时候，为btn添加一个类名，并改变下面盒子的样式。</span></span><br><span class="line">            <span class="keyword">this</span>.className=<span class="string">"controlBin"</span>;</span><br><span class="line">            coder[<span class="keyword">this</span>.index].style.display=<span class="string">'block'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在使用这个函数体的时候，需要格外注意，按钮的数量必须与下方的盒子一致，否则报错。</span></span><br><span class="line"><span class="comment">//样式属于字符串的类型，所以我们在改变其样式的时候，需要加上单引号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">注意子盒子的宽高要与其他盒子一致，否则页面效果不理想，会跳动。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">轮播图的概念与之相近，可以在函数体中加上时钟使它自行跳动。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">开发过程中需要额外注意结构问题，避免在后期加特效的时候耗费时间，影响效率。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></div>
+<p>使用js来做tab选项卡的好处相比较css 省去很长的代码以及烦心的定位问题，使我们的精力放在解决问题上，对于js获取元素的方法有以下几种方式，总结一下，避免日后因为这样的问题困扰：</p>
+<p>1.通过id获取目标元素（document.getElementById(‘元素id名’)）</p>
+<p>2.通过类名获取目标元素（getElementsByClassName(‘元素的类名’)）  注意这个有兼容性的问题，ie7以下的不支持，尽量少用</p>
+<p>3.通过标签的名字获取目标元素（getElementsByTagName(‘标签名称’)） 注意这个是标签的名称，不是类名，不要混淆</p>
+<p>页面中的样式可以通过js控制css来做，在元素中如果没有获取正确的数据，容易被浏览器报错，所以在开发过程中如果遇到报错，可以用console.log()方法来查看控制台，如果控制台数据有误，那么元素是没有正常获取的，此时应该检查自己的代码是否正确，语法以及命名。</p>
+<h1 id="javaScript-对象"><a href="#javaScript-对象" class="headerlink" title="javaScript 对象"></a>javaScript 对象</h1><p>1.javaScript是基于对象的一门语言，并不是真正面向对象的。</p>
+<p>2.可以通过内构的函数来构造自己的对象。</p>
+<p>3.对象是一个变量，它有自己的属性以及特点，同时也具有数组的特点，可以理解为拥有多个属性的一个变量。</p>
+<h1 id="关于对象的特点"><a href="#关于对象的特点" class="headerlink" title="关于对象的特点"></a>关于对象的特点</h1><p>1.对象是一组无序的数组，是不能通过for循环的方式将对象遍历出来，但是可以通过for__in循环的方式来遍历</p>
+<p>具体方式：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> 变量名 <span class="keyword">in</span> 对象名)</span><br></pre></td></tr></table></figure></div>
+<p>其中我们在输出对象时，不能通过   .属性名的方式来显示出来，因为结果为underfind</p>
+<h1 id="关于动画属性的总结"><a href="#关于动画属性的总结" class="headerlink" title="关于动画属性的总结"></a>关于动画属性的总结</h1><p>1.animation 复合属性，可以设置动画对象的八个属性进行连写，其中所必须的属性是动画的name值以及动画持续时间。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">animation-name:动画名称，由@keyframes定义的</span><br><span class="line">animation-duration：动画的持续时间</span><br><span class="line">animation-timing-function：动画的过渡类型    </span><br><span class="line">	匀速 linear</span><br><span class="line">	曲线 ease</span><br><span class="line">animation-delay：动画的延迟时间</span><br><span class="line">animation-iteration-count：动画的循环次数   默认值是1次，如果想无限循环的话可以设置infinite</span><br><span class="line">animation-direction：设置动画在循环中是否反向运动 </span><br><span class="line">	normal 默认值。动画按正常播放。  </span><br><span class="line">	reverse 动画反向播放。  </span><br><span class="line">	alternate 动画在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。  </span><br><span class="line">	alternate-reverse 动画在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。</span><br><span class="line">	initial 设置该属性为它的默认值。请参阅   </span><br><span class="line">	inherit 从父元素继承该属性 </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">animation-fill-mode：设置动画时间之外的状态</span><br><span class="line">animattion-play-state:设置动画的状态。</span><br><span class="line">	默认值是runing 表示在运行中</span><br><span class="line">	暂停是paused   表示暂停</span><br><span class="line"></span><br><span class="line">@keyframes  用来定义一个动画，可以用from&#123;&#125;---to&#123;&#125;来定义动画的节点，也可以用百分比0%---100%来定义多个动画节点。</span><br></pre></td></tr></table></figure></div>
+<h1 id="关于2D转换（transform）"><a href="#关于2D转换（transform）" class="headerlink" title="关于2D转换（transform）"></a>关于2D转换（transform）</h1><p>transform 的属性可以连写多个属性名，格式如：transform：属性1 属性2 属性3；</p>
+<p>2D转换常用的属性：</p>
+<ol>
+<li>rotate();  设置目标的2D旋转，正值为顺时针，负值为逆时针,单位为 “deg”</li>
+<li>translate(X,Y); 设置目标的平移，复合属性，小括号里面第一个值是X轴，第二个是Y轴,单位是px</li>
+</ol>
+<p>​       也可以单独设置translateX，translateY.</p>
+<ol>
+<li>skew 斜切、变形，用的较少，将目标进行斜切，单位是“deg”</li>
+<li>scale   缩放目标单位是数字，表示目标缩放的倍数 ，如果写一个值代表XY轴同时缩放，若写了两个则分别代表xy。</li>
+<li>transform-origin   改变2D转换的位置原点</li>
+</ol>
+<h1 id="3D转换（trasform的升级用法）"><a href="#3D转换（trasform的升级用法）" class="headerlink" title="3D转换（trasform的升级用法）"></a>3D转换（trasform的升级用法）</h1><p>1.perpective   透视的视距，单位是px，通常用于在父元素，使得子元素在2d转换的过程中有近大远小的效果</p>
+<ol>
+<li>transfoem-style: presever-3d; 把一个元素转换成立体的3d对象，默认值是flat</li>
+<li>transform-rotateX,rotateY 分别代表一个元素的3d旋转方式，单位是“deg”；</li>
+<li>transform-translatZ   代表着3d对象的Z轴方向进行平移，注意，这个和2d对象是 有区别的。</li>
+<li>trasform：rotate3d(x,y,z);   定义对象的3d缩放，里面分别代表着x,y,z 的缩放倍数</li>
+</ol>
+<h1 id="移动端开发"><a href="#移动端开发" class="headerlink" title="移动端开发"></a>移动端开发</h1><p>移动端的开发主要针对于手持设备进行单独开发</p>
+<p>优点：对于 手机等手持设备等支持较好，可以有很高的分辨率，可以等比例进行页面的缩放</p>
+<p>缺点：pc端的支持不够好，在pc页面上容易失真模糊</p>
+<p>移动端开发的要点：</p>
+<p>​    1.宽度为百分比流式布局</p>
+<p>​    2.高度写死</p>
+<p>​    3.用两倍图进行开发，目的是为了更清晰的展示</p>
+<h2 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h2><h5 id="1-max-width，min-weidth"><a href="#1-max-width，min-weidth" class="headerlink" title="1.max-width，min-weidth"></a>1.max-width，min-weidth</h5><p>​    用来设置最大和最小的宽度，通常用来设置包裹所有标签的父盒子</p>
+<p>​    目的是在用户缩放时不至于页面崩塌，造成体验效果差。</p>
+<h5 id="2-在移动端百分比布局中有以下布局："><a href="#2-在移动端百分比布局中有以下布局：" class="headerlink" title="2.在移动端百分比布局中有以下布局："></a>2.在移动端百分比布局中有以下布局：</h5><p>​    1.两边固定，中间按比例缩放</p>
+<p>​    2.等分布局</p>
+<p>​    3.左边或者右边固定，另一边等比例缩放。</p>
+<h5 id="3-两倍图的概念："><a href="#3-两倍图的概念：" class="headerlink" title="3.两倍图的概念："></a>3.两倍图的概念：</h5><p>​    通常在移动端开发的过程中ui设计师会给我们大于移动端两倍或者三倍的素材，目的是为了让移动端的设备</p>
+<p>​    能够看的更清晰，所以我们在开发过程中如果拿到这样的设计图应该第一时间把所有的尺寸缩小一半或是三分之一</p>
+<p>​    否则页面的效果不理想。</p>
+<h5 id="4-视口的概念-重要"><a href="#4-视口的概念-重要" class="headerlink" title="4.视口的概念(重要)"></a>4.视口的概念(重要)</h5><p>​    </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">问题：一个电脑上的网站，在手机端访问，效果是什么样的？</span><br><span class="line"></span><br><span class="line">iPhone5的设备宽度只有320px，一张宽度为640px的图片在手机端访问，显示的效果是什么？</span><br><span class="line"></span><br><span class="line">1. 在手机端，html的大小都是980px，为什么？</span><br><span class="line">这主要是历史原因导致的，因为在移动设备刚流行的时候，网站大多都是pc端的，pc端的页面宽度一般都比较大，移动设备的宽度比较小，如果pc端页面直接在移动端显示的话，页面就会错乱。为了解决这个问题，移动端html的大小直接就定死成了980px（因为早起的pc端网站版心就是980px居多）。</span><br><span class="line"></span><br><span class="line">2. 视口</span><br><span class="line">在pc端，html的大小默认是继承了浏览器的宽度，即浏览器多宽，html的大小就是多宽，但是在移动端，多出来了一个视口的概念（乔布斯）,视口说白了就是介于浏览器与html之间的一个东西，视口的宽度默认定死了980px，因此html的宽度默认就是980px，视口的特点是能够根据设备的宽度进行缩放。</span><br><span class="line"></span><br><span class="line">3. 视口设置。</span><br><span class="line">对于现在的移动端页面来说，视口默认为980px肯定不合适，因为设备宽度不够的话，视口会进行缩放，导致页面展示效果不好看。</span><br></pre></td></tr></table></figure></div>
+<h5 id="5-视口参数设置"><a href="#5-视口参数设置" class="headerlink" title="5.视口参数设置"></a>5.视口参数设置</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//width 设置视口的宽度</span></span><br><span class="line"><span class="comment">//width=device-width   设置视口宽度为设备的宽度（常用）。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//initial-scale 设置初始缩放比例</span></span><br><span class="line"><span class="comment">//initial-scale=1.0  表示不缩放</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//user-scalable 设置是否允许用户缩放</span></span><br><span class="line"><span class="comment">//user-scalable=no  不允许用户缩放</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//maximum-scale  设置允许的最大缩放比例</span></span><br><span class="line"><span class="comment">//maximum-scale=1.0  可以不设置，因为都禁止用户缩放了。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//minimum-scale 设置允许最小缩放比</span></span><br><span class="line"><span class="comment">//minimum-scale=1.0  不设置，因为都禁用用户缩放了。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//标准写法：</span></span><br><span class="line"><span class="comment">//快捷键：  meta:vp + tab键</span></span><br><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0"</span>&gt;</span><br></pre></td></tr></table></figure></div>
+<h1 id="flex弹性布局"><a href="#flex弹性布局" class="headerlink" title="flex弹性布局"></a>flex弹性布局</h1><p>当给一个盒子设置了display：flex之后，这个盒子就有了主轴和侧轴的概念。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主轴：Flex容器的主轴主要用来配置Flex项目，默认是水平方向</span><br><span class="line">侧轴：与主轴垂直的轴称作侧轴，默认是垂直方向的</span><br><span class="line">方向：主轴默认是水平从左到到右</span><br></pre></td></tr></table></figure></div>
+<h2 id="1-flex-direction"><a href="#1-flex-direction" class="headerlink" title="1.flex-direction"></a>1.flex-direction</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flex-diretion主要是用来调整主轴的方向的，默认是水平方向</span><br><span class="line"></span><br><span class="line">了解即可，一般来说，很少调整主轴的方向。</span><br><span class="line"></span><br><span class="line">属性：</span><br><span class="line">row：主轴方向为水平向右</span><br><span class="line">column：主轴方向为竖直向下</span><br><span class="line">row-reverse:主轴方向为水平向左</span><br><span class="line">column-reverse:主轴方向是竖直向上。</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-justify-content-重点"><a href="#2-justify-content-重点" class="headerlink" title="2.justify-content(重点)"></a>2.justify-content(重点)</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">justify-content主要用来设置主轴方向的对齐方式 ，可选的值有：</span><br><span class="line"></span><br><span class="line">flex-start:     弹性盒子元素将向起始位置对齐</span><br><span class="line">flex-end:       弹性盒子元素将向结束位置对齐。</span><br><span class="line">center:         弹性盒子元素将向行中间位置对齐</span><br><span class="line">space-around:   弹性盒子元素会平均地分布在行里</span><br><span class="line">space-between:  第一个贴左边，最后一个贴右边，其他盒子均分，保证每个盒子之间的空隙是相等的。</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-align-items-重点"><a href="#3-align-items-重点" class="headerlink" title="3.align-items(重点)"></a>3.align-items(重点)</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">align-items用于调整侧轴的对其方式 ，可选的值有：</span><br><span class="line"></span><br><span class="line">flex-start： 元素在侧轴的起始位置对其。 </span><br><span class="line">flex-end： 元素在侧轴的结束位置对其。</span><br><span class="line">center： 元素在侧轴上居中对其。</span><br><span class="line">stretch： 元素的高度会被拉伸到最大（不能给死高度）。</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-flex-wrap"><a href="#4-flex-wrap" class="headerlink" title="4.flex-wrap"></a>4.flex-wrap</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flex-wrap属性控制flex容器是单行或者多行,默认不换行</span><br><span class="line"></span><br><span class="line">nowrap： 不换行（默认），会压缩子盒子的宽度。</span><br><span class="line">wrap： 当宽度不够的时候，会换行。</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-align-content"><a href="#5-align-content" class="headerlink" title="5.align-content"></a>5.align-content</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">align-content用来设置多行的flex容器的排列方式。</span><br><span class="line"></span><br><span class="line">flex-start： 各行向侧轴的起始位置堆叠。 </span><br><span class="line">flex-end： 各行向弹性盒容器的结束位置堆叠。</span><br><span class="line">center： 各行向弹性盒容器的中间位置堆叠。</span><br><span class="line">space-between： 各行在侧轴中平均分布。 </span><br><span class="line">space-around： 第一行贴上边，最后一个行贴下边,其他行在弹性盒容器中平均分布。 </span><br><span class="line">stretch：拉伸，不设置高度的情况下。</span><br><span class="line"></span><br><span class="line">align-items与align-content的区别</span><br><span class="line"></span><br><span class="line">lign-items调整的是侧轴的对其方式，不换行一般用align-items</span><br><span class="line">align-content:必须是多行才生效，如果单行</span><br></pre></td></tr></table></figure></div>
+<h3 id="flex属性"><a href="#flex属性" class="headerlink" title="flex属性"></a>flex属性</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上述讲的属性都是给父盒子设置的，接下来的几个属性是给子盒子设置的。 </span><br><span class="line"></span><br><span class="line">flex属性用来设置子盒子如何分配主轴空间，单位是数值</span><br></pre></td></tr></table></figure></div>
+<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</span><br></pre></td></tr></table></figure></div>
+<h3 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">align-self也是用于设置在侧轴的位置，但是align-self给子元素设置，优先级比align-items的优先级高</span><br><span class="line">取值与align-items的取值一样。</span><br></pre></td></tr></table></figure></div>
+<h1 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">什么是响应式布局</span><br><span class="line">响应式布局（respond layout）是Ethan Marcotte在2010年5月份提出的一个概念，简而言之，就是一个网站能够兼容多个终端（手机、平板、pc电脑、手表） ——而不是为每个终端做一个特定的版本。这个概念是为解决移动互联网浏览而诞生的。</span><br><span class="line"></span><br><span class="line">为什么要有响应式布局？ </span><br><span class="line"></span><br><span class="line">- 在移动互联日益成熟的时候，在PC端开发的网页已经无法满足移动设备的要求。</span><br><span class="line">- 通常的做法是针对移动端单独做一套特定的版本。</span><br><span class="line">- 如果终端越来越多，那么需要开发的版本就会越来越多（大屏设备的普及）</span><br><span class="line">- 响应式布局 ：一个网站能够兼容多个终端（节约开发成本）</span><br></pre></td></tr></table></figure></div>
+<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">面对不同分辨率设备灵活性强</span><br><span class="line"></span><br><span class="line">能够快捷解决多设备显示适应问题</span><br></pre></td></tr></table></figure></div>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">兼容各种设备工作量大，效率低下</span><br><span class="line"></span><br><span class="line">代码累赘，会出现隐藏无用的元素，加载时间加长</span><br><span class="line"></span><br><span class="line">其实这是一种折中性质的设计解决方案，多方面因素影响而达不到最佳效果</span><br><span class="line"></span><br><span class="line">一定程度上改变了网站原有的布局结构，会出现用户混淆的情况</span><br></pre></td></tr></table></figure></div>
+<h2 id="响应式开发与移动web开发的比较"><a href="#响应式开发与移动web开发的比较" class="headerlink" title="响应式开发与移动web开发的比较"></a>响应式开发与移动web开发的比较</h2><h3 id="web开发："><a href="#web开发：" class="headerlink" title="web开发："></a>web开发：</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">引用场景	一般已经有了PC端网站，只需要端独开发移动端网站即可	针对一些新建网站，并且要求适配移动端</span><br><span class="line">开发  	针对性强，开发效率高                	        </span><br><span class="line">适配  	只能适配移动端或者PC端，pad上体验比较差           </span><br><span class="line">效率  	代码简介，加载快</span><br></pre></td></tr></table></figure></div>
+<h3 id="响应式开发-："><a href="#响应式开发-：" class="headerlink" title="响应式开发 ："></a>响应式开发 ：</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">引用场景        移动web开发+pc开发      </span><br><span class="line">开发            兼容各种终端，效率低</span><br><span class="line">适配            可以适配各种终端</span><br><span class="line">效率            代码相对复杂，加载慢</span><br></pre></td></tr></table></figure></div>
+<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">媒体查询（Media Query）是CSS3提出来的一个新的属性，通过媒体查询可以查询到screen的宽度，从而指定某个宽度区间的网页布局。</span><br><span class="line"></span><br><span class="line">设备分类</span><br><span class="line"></span><br><span class="line">分类        宽度范围 </span><br><span class="line">大屏设备 	&gt;1200px     </span><br><span class="line">中屏设备 	992px~1200px</span><br><span class="line">小屏设备 	768px~992px </span><br><span class="line">超小屏设备	&lt; 768px</span><br></pre></td></tr></table></figure></div>
+<h3 id="媒体查询的使用"><a href="#媒体查询的使用" class="headerlink" title="媒体查询的使用"></a>媒体查询的使用</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and 条件 &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*条件的写法*/</span></span><br><span class="line"><span class="comment">/*min-width:只要屏幕宽度超过这个值的设备样式就能生效*/</span></span><br><span class="line"><span class="comment">/*max-width:只要屏幕宽度小于这个值的设备样式就能生效*/</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">1200px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1170px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">992px</span>) and (max-width: <span class="number">1200px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">970px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">768px</span>) and (max-width: <span class="number">992px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">750px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>弊端：现在只有一个div，要做一套响应式布局，就需要如此多的代码，非常的麻烦，因此我们会更多的借助一些响应式的框架，比如bootstrap。</p>
+<h2 id="bootstrap框架"><a href="#bootstrap框架" class="headerlink" title="bootstrap框架"></a>bootstrap框架</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。</span><br></pre></td></tr></table></figure></div>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li>组件简洁大方、代码规范精简、界面自定义性强。</li>
+<li>Bootstrap是基于HTML5和CSS3开发的，它在jQuery的基础上进行了更为个性化和人性化的完善，形成一套自己独有的网站风格，并兼容大部分jQuery插件。</li>
+<li>Bootstrap中包含了丰富的Web组件，根据这些组件，可以快速的搭建一个漂亮、功能完备的网站。</li>
+</ul>
+<h3 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h3><ul>
+<li>有自己的生态圈，不断的更新迭代</li>
+<li>提供了一套简洁、直观、强悍的组件</li>
+<li>标准化的HTML+CSS编码规范</li>
+<li>让开发更简单，提高了开发效率。</li>
+<li>扩展性强，虽然界面组件样式已经定义好了，我们还可以自定义，修改默认样式。</li>
+</ul>
+<h3 id="版本："><a href="#版本：" class="headerlink" title="版本："></a>版本：</h3><ul>
+<li>2.x.x 停止维护<ul>
+<li>优点：兼容性好</li>
+<li>缺点：代码不够简洁、功能不够完善</li>
+</ul>
+</li>
+<li>3.x.x 目前使用最多<ul>
+<li>优点：稳定，偏向于开发响应式布局，移动设备优先的WEB项目</li>
+<li>缺点：放弃了IE67，对IE8支持但是界面效果不友好</li>
+</ul>
+</li>
+<li>4.x.x 阶段</li>
+</ul>
+<h3 id="基本模板"><a href="#基本模板" class="headerlink" title="基本模板"></a>基本模板</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>bootstrap基本模板<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">&lt;!--引入bootstrap的核心样式文件--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"lib/bootstrap/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>你好，世界！<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--bootstrap依赖与jquery，因此需要在bootstrap之前引入jquery文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"lib/jquery/jquery-1.12.4.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--引入bootstrap的核心js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"lib/bootstrap/js/bootstrap.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h2><h3 id="container容器"><a href="#container容器" class="headerlink" title="container容器"></a>container容器</h3><p>Bootstrap 需要为页面内容和栅格系统包裹一个 .container 容器。默认带了15px的padding值。</p>
+<p>.container 类用于固定宽度并支持响应式布局的容器。<br>.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
+<h4 id="这两种-容器类不能互相嵌套。"><a href="#这两种-容器类不能互相嵌套。" class="headerlink" title="这两种 容器类不能互相嵌套。"></a>这两种 容器类不能互相嵌套。</h4><h2 id="栅格系统"><a href="#栅格系统" class="headerlink" title="栅格系统"></a>栅格系统</h2><p>栅格系统，也叫网格系统</p>
+<ul>
+<li>.row用于抵消.container容器的15px的padding值</li>
+<li>可以在.row中嵌套column</li>
+</ul>
+<p>栅格系统常用类（总共12列）<br>.col-xs-xx</p>
+<p>.col-xs-6</p>
+<p>在超小屏幕（及以上）生效</p>
+<p>.col-sm-xx</p>
+<p>.col-sm-6</p>
+<p>在小屏幕（及以上）生效</p>
+<p>.col-md-xx</p>
+<p>.col-md-6</p>
+<p>在中屏幕（及以上）生效</p>
+<p>.col-lg-xx</p>
+<p>.col-lg-3</p>
+<p>在大屏幕及生效，占1/4</p>
+<p>.col-lg-xx</p>
+<p>.col-lg-4</p>
+<p>在大屏幕及生效，占1/3</p>
+<p>.col-lg-xx</p>
+<p>.col-lg-5</p>
+<p>在大屏幕及生效，占1/2</p>
+<h1 id="倒计时的总结思路"><a href="#倒计时的总结思路" class="headerlink" title="倒计时的总结思路"></a>倒计时的总结思路</h1><p>步骤：</p>
+<p>1.创建一个目标时间，并获取它的时间毫秒数</p>
+<p>2.创建一个现在时间，并获取毫秒数</p>
+<p>3.用目标时间减去现在的时间就可得出还有多长时间到达目标时间</p>
+<p>4.用getHours，getMinutes,还有getSeconds分别获取它(结果)的时分秒</p>
+<p>5.将结果显示在页面当中，并将小时单位减去8，因为电脑的单位需要换算</p>
+<p>代码如下：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"></span><br><span class="line">setInterval(timer, <span class="number">900</span>);</span><br><span class="line">        <span class="comment">//创建一个时间函数</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//获取目标元素，为存放时间对象做准备</span></span><br><span class="line">            <span class="keyword">var</span> timer = <span class="built_in">document</span>.getElementById(<span class="string">'timer'</span>).getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">            <span class="comment">//创建一个目标时间</span></span><br><span class="line">            <span class="keyword">var</span> clck = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">14</span>,<span class="number">00</span>,<span class="number">00</span>); </span><br><span class="line">            <span class="comment">//获取现在的时间</span></span><br><span class="line">            <span class="keyword">var</span> nowClck = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">            <span class="comment">//创建一个变量用来存储目标时间减去现在的时间</span></span><br><span class="line">            <span class="keyword">var</span> nows = <span class="keyword">new</span> <span class="built_in">Date</span>(clck.getTime() - nowClck.getTime());</span><br><span class="line">            <span class="comment">//创建三个变量用来存储比较后的时，分，秒</span></span><br><span class="line">            <span class="keyword">var</span> ch, cm, cs;</span><br><span class="line">            <span class="comment">//获取nows的时分秒</span></span><br><span class="line">            cs = nows.getSeconds();</span><br><span class="line">            cm = nows.getMinutes();</span><br><span class="line">            ch = nows.getHours()<span class="number">-8</span>;</span><br><span class="line">            <span class="comment">//判断这个时间是否小于10，如果小于10在前面添加一个0</span></span><br><span class="line">            ch&lt;<span class="number">10</span>?ch=<span class="string">'0'</span>+ch:ch;</span><br><span class="line">            cm&lt;<span class="number">10</span>?cm=<span class="string">'0'</span>+cm:cm;</span><br><span class="line">            cs&lt;<span class="number">10</span>?cs=<span class="string">'0'</span>+cs:cs;</span><br><span class="line">            <span class="comment">//将时分秒输出到页面上</span></span><br><span class="line">            timer[<span class="number">0</span>].innerText =ch;</span><br><span class="line">            timer[<span class="number">1</span>].innerText =cm;</span><br><span class="line">            timer[<span class="number">2</span>].innerText =cs;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></div>
+<p>总结：</p>
+<p>​    时间不能倒走，但是可以通过获取时间差的方式来实现倒计时，注意在毫秒计算的过程中不要有强迫症</p>
+<p>向下取整，否则在单位换算的过程中会导致underfind，setinterval方法的刷新时间可以稍稍比一秒稍快一点</p>
+<p>这样的时间会看起来更加精准。</p>
+<h1 id="滚动轮播图的总结思考"><a href="#滚动轮播图的总结思考" class="headerlink" title="滚动轮播图的总结思考"></a>滚动轮播图的总结思考</h1><p>思路：</p>
+<p>​    1.先创建一个大的盒子作为视觉区，然后里面放上一个列表标签ul，ul的宽度是li的宽度和，</p>
+<p>然后让li浮动起来，大盒子overflow：hidden，将超出的部分进行隐藏。</p>
+<p>​    2.用js获取目标的元素，通过改变ul的marginleft的值来进行偏移，并且在刚好一张图片的位置下</p>
+<p>暂停一秒，在图片结束的时候立刻从头开始，并创建一个时钟，控制轮播。</p>
+<p>步骤： </p>
+<p>​    1.获取盒子元素</p>
+<p>​    2.创建一个变量并给目标父盒子初始化样式。</p>
+<p>​    3.创建一个函数作为程序的主线程，里面放所有需要运行的函数。</p>
+<p>​    4.添加判断条件</p>
+<p>​    5.添加时钟事件</p>
+<p>代码如下：</p>
+<p>​    </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//banner 轮播图的部分</span></span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">banner</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">           <span class="comment">//获取目标元素的子元素li</span></span><br><span class="line">           <span class="keyword">var</span> lst = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>).getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">           <span class="keyword">var</span> left = <span class="number">0</span>;</span><br><span class="line">           <span class="keyword">var</span> timer;</span><br><span class="line">           <span class="comment">//初始化marginleft的值与单位</span></span><br><span class="line">           list.style.marginLeft = left + <span class="string">'%'</span>;</span><br><span class="line">           <span class="comment">//创建一个时钟  每两秒运行一次run（）；</span></span><br><span class="line">           timer = setTimeout(run, <span class="number">2000</span>);</span><br><span class="line">           <span class="comment">//创建一个run()函数作为整个banner 的主线程，控制整个banner的行为</span></span><br><span class="line">           <span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">               <span class="comment">//如果这个left的值小于-700，那么left值为0，并且清除名字叫timer的时钟</span></span><br><span class="line">               <span class="keyword">if</span> (left &lt; <span class="number">-700</span>) &#123;</span><br><span class="line">                   left = <span class="number">0</span>;</span><br><span class="line">                   clearTimeout(timer);</span><br><span class="line">               &#125;</span><br><span class="line">               change();</span><br><span class="line">               timer = setTimeout(run, <span class="number">2000</span>);</span><br><span class="line">               <span class="comment">//设置left的偏移值，每执行一次run() 函数，就减少100</span></span><br><span class="line">               left -= <span class="number">100</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//这个函数是为了方便调用单位</span></span><br><span class="line">           <span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">               list.style.marginLeft = left + <span class="string">'%'</span>;</span><br><span class="line"></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></div>
+<p>​    </p>
+<p>思路总结：</p>
+<p>​    滚动式的轮播在网上有很多种的版本，但是原理是一样通过改变marginleft的值来实现滚动的，这里我尝试了用百分比的方式布局，并通过改变marginleft的百分比来进行滚动，相比改变具体的值更加简便和适用移动端。</p>
+<h1 id="移动端常用的布局优缺点"><a href="#移动端常用的布局优缺点" class="headerlink" title="移动端常用的布局优缺点"></a>移动端常用的布局优缺点</h1><h5 id="1-流式布局"><a href="#1-流式布局" class="headerlink" title="1.流式布局"></a>1.流式布局</h5><p>​    特点：用px做单位，在用户缩放的时候一部分固定一部分自适应；</p>
+<p>​    缺点： 不是等比例缩放，缩放的字体以及图标效果不是很理想，只有几个机型可以完美实现设计图；</p>
+<h5 id="2-响应式布局"><a href="#2-响应式布局" class="headerlink" title="2.响应式布局"></a>2.响应式布局</h5><p>​    特点：用px做单位，适配移动端和pc端，能够完美的进行pc和移动端之间进行缩放</p>
+<p>​    缩放：只能适配部分机型，开发过程过于复杂，难维护；</p>
+<h5 id="3-flex布局（弹性盒子）"><a href="#3-flex布局（弹性盒子）" class="headerlink" title="3.flex布局（弹性盒子）"></a>3.flex布局（弹性盒子）</h5><p>​    特点：</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+
+
+
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        半城狂沙
+      
+    </h3>
+    <p class="avatar-slogan">
+      来自一个特别菜鸡的小前端的小小博客
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/03/利用hexo-快速搭建自己的博客/">利用hexo 快速搭建自己的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/03/自己的笔记/">自己的笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 bundy &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
