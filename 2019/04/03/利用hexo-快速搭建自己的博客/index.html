@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="前端小菜鸡">
 <meta property="og:description" content="1.前言今天来分享下怎么利用github来搭建自己的技术博客； 为什么一定要github pages来搭建？ 使用github pages服务搭建博客的好处有：   全是静态文件，访问速度快； 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台； 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的； 数据绝对安全，基于github的版本管理，想恢复">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-07T14:26:06.965Z">
+<meta property="og:updated_time" content="2019-04-07T14:35:06.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用hexo 快速搭建自己的博客">
 <meta name="twitter:description" content="1.前言今天来分享下怎么利用github来搭建自己的技术博客； 为什么一定要github pages来搭建？ 使用github pages服务搭建博客的好处有：   全是静态文件，访问速度快； 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台； 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的； 数据绝对安全，基于github的版本管理，想恢复">
@@ -129,9 +129,7 @@
 </ul>
 <p>另外说一句，在你绑定了新域名之后，原来的<code>你的用户名.github.io</code>并没有失效，而是会自动跳转到你的新域名。 </p>
 <h1 id="5-配置SSH-key"><a href="#5-配置SSH-key" class="headerlink" title="5.配置SSH key"></a>5.配置SSH key</h1><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。 </p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 <p>如果提示：No such file or directory 说明你是第一次使用git。 </p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 <p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key： </p>
 <p>将刚复制的内容粘贴到key那里，title随便填，保存。 </p>
 <h2 id="测试是否成功代码如下"><a href="#测试是否成功代码如下" class="headerlink" title="测试是否成功代码如下"></a>测试是否成功代码如下</h2><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure></div>
