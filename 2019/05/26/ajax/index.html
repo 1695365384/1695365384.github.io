@@ -5,22 +5,22 @@
   
 
   
-  <title>前端小菜鸡</title>
+  <title>AJAX | 前端小菜鸡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta name="description" content="title: AJAXdate: 2019-5-26 09:46:19tags:  一次完整的ajax请求12345678910111213var requestif(window.XMLHttpRequest)&amp;#123;  request=new XMLHttpRequest()//IE7+,...&amp;#125;else&amp;#123;   request=new ActiveXObject(&quot;M">
+  <meta name="description" content="一次完整的ajax请求12345678910111213var requestif(window.XMLHttpRequest)&amp;#123;  request=new XMLHttpRequest()//IE7+,...&amp;#125;else&amp;#123;   request=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)//IE6,IE5 用 XHR 发送请求： ope">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端小菜鸡">
+<meta property="og:title" content="AJAX">
 <meta property="og:url" content="http://yoursite.com/2019/05/26/ajax/index.html">
 <meta property="og:site_name" content="前端小菜鸡">
-<meta property="og:description" content="title: AJAXdate: 2019-5-26 09:46:19tags:  一次完整的ajax请求12345678910111213var requestif(window.XMLHttpRequest)&amp;#123;  request=new XMLHttpRequest()//IE7+,...&amp;#125;else&amp;#123;   request=new ActiveXObject(&quot;M">
+<meta property="og:description" content="一次完整的ajax请求12345678910111213var requestif(window.XMLHttpRequest)&amp;#123;  request=new XMLHttpRequest()//IE7+,...&amp;#125;else&amp;#123;   request=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)//IE6,IE5 用 XHR 发送请求： ope">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-26T01:46:20.162Z">
+<meta property="og:updated_time" content="2019-05-26T01:55:24.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端小菜鸡">
-<meta name="twitter:description" content="title: AJAXdate: 2019-5-26 09:46:19tags:  一次完整的ajax请求12345678910111213var requestif(window.XMLHttpRequest)&amp;#123;  request=new XMLHttpRequest()//IE7+,...&amp;#125;else&amp;#123;   request=new ActiveXObject(&quot;M">
+<meta name="twitter:title" content="AJAX">
+<meta name="twitter:description" content="一次完整的ajax请求12345678910111213var requestif(window.XMLHttpRequest)&amp;#123;  request=new XMLHttpRequest()//IE7+,...&amp;#125;else&amp;#123;   request=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)//IE6,IE5 用 XHR 发送请求： ope">
   
     <link rel="alternate" href="/atom.xml" title="前端小菜鸡" type="application/atom+xml">
   
@@ -55,9 +55,19 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main"><article id="post-ajax" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      AJAX
+    </h1>
+  
+
+    </header>
+  
   <div class="article-meta">
     <a href="/2019/05/26/ajax/" class="article-date">
-  <time datetime="2019-05-26T01:42:37.050Z" itemprop="datePublished">2019-05-26</time>
+  <time datetime="2019-05-26T01:46:19.000Z" itemprop="datePublished">2019-05-26</time>
 </a>
     
     
@@ -72,10 +82,7 @@
     
     <div class="article-content article-content-doorframe" itemprop="articleBody">
       
-        <hr>
-<p>title: AJAX<br>date: 2019-5-26 09:46:19<br>tags:</p>
-<hr>
-<h1 id="一次完整的ajax请求"><a href="#一次完整的ajax请求" class="headerlink" title="一次完整的ajax请求"></a>一次完整的ajax请求</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> request</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;  </span><br><span class="line">request=<span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE7+,...</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;   request=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE6,IE5 用 XHR 发送请求： open(method,url,async) 调用 XHR 对象，async 表示同步还是异步，默认为 true(异步)； send(String)    发送请求。</span></span><br><span class="line">request.open(<span class="string">"POST"</span>,<span class="string">"create.php"</span>,<span class="literal">true</span>)</span><br><span class="line">request.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>)</span><br><span class="line">  <span class="comment">//必须写在 open 和 send 中间</span></span><br><span class="line">request.send(<span class="string">"name=王大锤&amp;sex=男"</span>)</span><br></pre></td></tr></table></figure></div>
+        <h1 id="一次完整的ajax请求"><a href="#一次完整的ajax请求" class="headerlink" title="一次完整的ajax请求"></a>一次完整的ajax请求</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> request</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;  </span><br><span class="line">request=<span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE7+,...</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;   request=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE6,IE5 用 XHR 发送请求： open(method,url,async) 调用 XHR 对象，async 表示同步还是异步，默认为 true(异步)； send(String)    发送请求。</span></span><br><span class="line">request.open(<span class="string">"POST"</span>,<span class="string">"create.php"</span>,<span class="literal">true</span>)</span><br><span class="line">request.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>)</span><br><span class="line">  <span class="comment">//必须写在 open 和 send 中间</span></span><br><span class="line">request.send(<span class="string">"name=王大锤&amp;sex=男"</span>)</span><br></pre></td></tr></table></figure></div>
 <p>一、xhr 取得响应<br>1、responseText:获得字符串形式的相应数据。<br>2、responsXML:获得 XML 形式的相应数据。<br>3、status 和 statusText：以数字和文本形式返回 http 状态码。<br>4、getAllResponseHeader()：获取所有的响应报头。<br>5、getResponseHeader()：查询响应中的某个字段的值。<br>6、readyState 属性：响应返回成功的时候得到通知。<br>（1）0：请求未初始化，open 还没有调用。<br>（2）1：服务器连接已建立，open 已经调用了。<br>（3）2：请求已经接收，也就是接收到头信息了。<br>（4）3：请求处理中，也就是接收到响应主体了。<br>（5）4：请求已完成，且响应已就绪，也就是响应完成了。</p>
 <p>二、典型的 xhr 建立 ajax 的过程。（涵盖了 ajax 的大部分内容）<br>1、new 一个 xhr 对象。<br>2、调用 xhr 对象的 open 方法。<br>3、send 一些数据。<br>4、对服务器的响应过程进行监听，来知道服务器是否正确得做出了响应，接着就可以做一些事情。比如获取服务器响应的内容，在页面上进行呈现。</p>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//jquery 中的 ajax</span></span><br><span class="line"></span><br><span class="line">$.ajax(&#123;         </span><br><span class="line">    type:<span class="string">"GET"</span>,         </span><br><span class="line">    url:<span class="string">"service.php?number="</span>+$(<span class="string">"#keyword"</span>).val(),         </span><br><span class="line">    dataType:<span class="string">"json"</span>,</span><br><span class="line">    <span class="comment">//预期服务器返回数据的类型         </span></span><br><span class="line">    success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;            </span><br><span class="line">    <span class="keyword">if</span>(data.success)&#123;                </span><br><span class="line">    $(<span class="string">"searchResult"</span>).html(data.msg)</span><br><span class="line">             </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;                </span><br><span class="line">       $(<span class="string">"#searchResult"</span>).html(<span class="string">"出现错误："</span> + data.msg)</span><br><span class="line">           &#125;         </span><br><span class="line">&#125;,         </span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params">jqXHR</span>)</span>&#123;           </span><br><span class="line">        aler(<span class="string">"发生错误："</span>+ jqXHR.status)</span><br><span class="line">        &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
@@ -102,20 +109,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/05/26/关于http的文章/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            http协议
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/05/23/九个常见的css问题技巧/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">DOM 相关</div>
+      <a href="/2019/05/26/post和get的区别/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">GET和post的区别</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
@@ -184,7 +182,11 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/05/26/post和get的区别/">DOM 相关</a>
+            <a href="/2019/05/26/ajax/">AJAX</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/26/post和get的区别/">GET和post的区别</a>
           </li>
         
           <li>
@@ -192,11 +194,7 @@ gitment.render('gitmentContainer')
           </li>
         
           <li>
-            <a href="/2019/05/26/ajax/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/23/九个常见的css问题技巧/">DOM 相关</a>
+            <a href="/2019/05/23/九个常见的css问题技巧/">九个常见的css技巧</a>
           </li>
         
           <li>
