@@ -5,14 +5,14 @@
   
 
   
-  <title>text | 前端小菜鸡</title>
+  <title>关于node中关于mysql的一些方法总结 | 前端小菜鸡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="description" content="server.js   =》  node.js的服务器启动文件 db.js   =》  数据库操作文件 views  =》  存放模板文件，也就是所有的页面存放的地方 public =》  存放所有静态资源的地方，比如css js images之类的 首先介绍一下node.js连接MySQL的步骤，第一步，需要安装一个叫做MySQL的npm包，这个包是官方提供的，稳定性是可以保证的，当然，也还有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="text">
+<meta property="og:title" content="关于node中关于mysql的一些方法总结">
 <meta property="og:url" content="http://yoursite.com/2019/06/03/node操作MySQL的一些方法/index.html">
 <meta property="og:site_name" content="前端小菜鸡">
 <meta property="og:description" content="server.js   =》  node.js的服务器启动文件 db.js   =》  数据库操作文件 views  =》  存放模板文件，也就是所有的页面存放的地方 public =》  存放所有静态资源的地方，比如css js images之类的 首先介绍一下node.js连接MySQL的步骤，第一步，需要安装一个叫做MySQL的npm包，这个包是官方提供的，稳定性是可以保证的，当然，也还有">
@@ -28,11 +28,9 @@
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003222936254-145560864.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003223337739-1558231183.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003223539317-827536391.png">
-<meta property="og:image" content="https://common.cnblogs.com/images/icon_weibo_24.png">
-<meta property="og:image" content="https://common.cnblogs.com/images/wechat.png">
-<meta property="og:updated_time" content="2019-06-03T12:59:32.151Z">
+<meta property="og:updated_time" content="2019-06-03T13:04:34.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="text">
+<meta name="twitter:title" content="关于node中关于mysql的一些方法总结">
 <meta name="twitter:description" content="server.js   =》  node.js的服务器启动文件 db.js   =》  数据库操作文件 views  =》  存放模板文件，也就是所有的页面存放的地方 public =》  存放所有静态资源的地方，比如css js images之类的 首先介绍一下node.js连接MySQL的步骤，第一步，需要安装一个叫做MySQL的npm包，这个包是官方提供的，稳定性是可以保证的，当然，也还有">
 <meta name="twitter:image" content="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003214841067-1469965922.png">
   
@@ -73,7 +71,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      text
+      关于node中关于mysql的一些方法总结
     </h1>
   
 
@@ -130,7 +128,6 @@
 <p>其实这里就是node.js的异步造成的一些问题了，如果我们把server.js中的代码改成下图</p>
 <p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003223539317-827536391.png" alt="img"></p>
 <p>因为我们看到了mysql包的query方法是异步操作，这就导致下面的res.render()方法不会等待他把结果查询出来以后再执行，往往是结果还没出来，就已经开始渲染页面，但是数据又没有得到，所以就会报错了。因此只好传送了一个回调函数进去，在mysql的query方法结束以后，把结果通过参数传入到我们自己写的回调函数中，这样我们就能在回调函数里得到结果了。然后再执行渲染。当然处理这个问题还可以引入第三方包 async来解决异步问题，具体看个人了。</p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener">好文要顶</a>;) <a href="javascript:void(0" target="_blank" rel="noopener">关注我</a>;) <a href="javascript:void(0" target="_blank" rel="noopener">收藏该文</a>;) <a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/icon_weibo_24.png" alt="img"></a>;) <a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/wechat.png" alt="img"></a>;)</p>
 
       
     </div>
@@ -218,7 +215,7 @@
       <ul>
         
           <li>
-            <a href="/2019/06/03/node操作MySQL的一些方法/">text</a>
+            <a href="/2019/06/03/node操作MySQL的一些方法/">关于node中关于mysql的一些方法总结</a>
           </li>
         
           <li>

@@ -57,7 +57,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/03/node操作MySQL的一些方法/">text</a>
+      <a class="article-title" href="/2019/06/03/node操作MySQL的一些方法/">关于node中关于mysql的一些方法总结</a>
     </h1>
   
 
@@ -110,7 +110,6 @@
 <p>其实这里就是node.js的异步造成的一些问题了，如果我们把server.js中的代码改成下图</p>
 <p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003223539317-827536391.png" alt="img"></p>
 <p>因为我们看到了mysql包的query方法是异步操作，这就导致下面的res.render()方法不会等待他把结果查询出来以后再执行，往往是结果还没出来，就已经开始渲染页面，但是数据又没有得到，所以就会报错了。因此只好传送了一个回调函数进去，在mysql的query方法结束以后，把结果通过参数传入到我们自己写的回调函数中，这样我们就能在回调函数里得到结果了。然后再执行渲染。当然处理这个问题还可以引入第三方包 async来解决异步问题，具体看个人了。</p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener">好文要顶</a>;) <a href="javascript:void(0" target="_blank" rel="noopener">关注我</a>;) <a href="javascript:void(0" target="_blank" rel="noopener">收藏该文</a>;) <a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/icon_weibo_24.png" alt="img"></a>;) <a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/wechat.png" alt="img"></a>;)</p>
 
       
     </div>
@@ -172,7 +171,7 @@
       <ul>
         
           <li>
-            <a href="/2019/06/03/node操作MySQL的一些方法/">text</a>
+            <a href="/2019/06/03/node操作MySQL的一些方法/">关于node中关于mysql的一些方法总结</a>
           </li>
         
           <li>
