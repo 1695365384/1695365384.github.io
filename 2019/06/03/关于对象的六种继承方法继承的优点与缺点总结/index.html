@@ -5,18 +5,31 @@
   
 
   
-  <title>前端小菜鸡</title>
+  <title>关于对象的六种继承方法继承的优点与缺点总结 | 前端小菜鸡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="前端小菜鸡">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="想要继承，就必须要提供个父类（继承谁，提供继承的属性） 　　　　 　　一、原型链继承 　　　　 　　　　重点：让新实例的原型等于父类的实例。 　　　　特点：1、实例可继承的属性有：实例的构造函数的属性，父类构造函数属性，父类原型的属性。（新实例不会继承父类实例的属性！） 　　　　缺点：1、新实例无法向父类构造函数传参。 　　　　　　　2、继承单一。 　　　　　　　3、所有新实例都会共享父类实例的属">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于对象的六种继承方法继承的优点与缺点总结">
+<meta property="og:url" content="http://yoursite.com/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/index.html">
 <meta property="og:site_name" content="前端小菜鸡">
+<meta property="og:description" content="想要继承，就必须要提供个父类（继承谁，提供继承的属性） 　　　　 　　一、原型链继承 　　　　 　　　　重点：让新实例的原型等于父类的实例。 　　　　特点：1、实例可继承的属性有：实例的构造函数的属性，父类构造函数属性，父类原型的属性。（新实例不会继承父类实例的属性！） 　　　　缺点：1、新实例无法向父类构造函数传参。 　　　　　　　2、继承单一。 　　　　　　　3、所有新实例都会共享父类实例的属">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105141131753-1515292318.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105142159784-2086058141.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105145831456-1753461572.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105155605534-390785677.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180106215835940-1606427226.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180106230703768-1647906557.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180107014609737-663376247.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180107013758206-57906529.png">
+<meta property="og:updated_time" content="2019-06-03T13:16:47.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端小菜鸡">
+<meta name="twitter:title" content="关于对象的六种继承方法继承的优点与缺点总结">
+<meta name="twitter:description" content="想要继承，就必须要提供个父类（继承谁，提供继承的属性） 　　　　 　　一、原型链继承 　　　　 　　　　重点：让新实例的原型等于父类的实例。 　　　　特点：1、实例可继承的属性有：实例的构造函数的属性，父类构造函数属性，父类原型的属性。（新实例不会继承父类实例的属性！） 　　　　缺点：1、新实例无法向父类构造函数传参。 　　　　　　　2、继承单一。 　　　　　　　3、所有新实例都会共享父类实例的属">
+<meta name="twitter:image" content="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105141131753-1515292318.png">
   
     <link rel="alternate" href="/atom.xml" title="前端小菜鸡" type="application/atom+xml">
   
@@ -49,15 +62,13 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main">
-  
-    <article id="post-关于对象的六种继承方法继承的优点与缺点总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-关于对象的六种继承方法继承的优点与缺点总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/">关于对象的六种继承方法继承的优点与缺点总结</a>
+    <h1 class="article-title" itemprop="name">
+      关于对象的六种继承方法继承的优点与缺点总结
     </h1>
   
 
@@ -70,6 +81,10 @@
     
     
   </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
   
 
   <div class="article-inner">
@@ -128,20 +143,46 @@
       
     </div>
     
+      <footer class="article-footer">
+        完
+      </footer>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/03/node操作MySQL的一些方法/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">关于node中关于mysql的一些方法总结</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: '1695365384',
+    repo: 'https://1695365384.github.io',
+    oauth: {
+      client_id: '02c87f5cc26985f426a8',
+      client_secret: '8e535924bf60f096386a5ea5f3d868a94b2162ce',
+    },
+  })
+  gitment.render('gitmentContainer')
+</script>
+
   
   
 </article>
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-  </nav>
-
-
 </section>
         <aside id="sidebar">
   
