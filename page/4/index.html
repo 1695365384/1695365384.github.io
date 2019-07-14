@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
 
@@ -41,9 +41,13 @@
   <div class="head-box global-width">
     <nav class="nav-box nav-right">
       
-        <a class="nav-item" href="/" title>首页</a>
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
       
-        <a class="nav-item" href="/archives" title>归档</a>
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
       
     </nav>
   </div>
@@ -51,21 +55,21 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
-    <article id="post-01-ES6笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
+    <article id="post-一些状态响应码的含义" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/29/01-ES6笔记/">ES6特性</a>
+      <a class="article-title" href="/2019/05/31/一些状态响应码的含义/">关于http请求中的状态码含义</a>
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/05/29/01-ES6笔记/" class="article-date">
-  <time datetime="2019-05-29T07:34:19.000Z" itemprop="datePublished">2019-05-29</time>
+    <a href="/2019/05/31/一些状态响应码的含义/" class="article-date">
+  <time datetime="2019-05-31T03:06:00.000Z" itemprop="datePublished">2019-05-31</time>
 </a>
     
     
@@ -76,163 +80,207 @@
     
     <div class="article-content article-content-doorframe" itemprop="articleBody">
       
-        <h1 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h1><blockquote>
-<p>ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。</p>
-</blockquote>
-<p>我们从node开始，会大量用到ES6中的一些新语法，因此在学习node之前需要先学习一下es6中提供的新语法</p>
-<h2 id="ECMAScript与Javascript的关系"><a href="#ECMAScript与Javascript的关系" class="headerlink" title="ECMAScript与Javascript的关系"></a>ECMAScript与Javascript的关系</h2><p>ECMAScript，简称ES，是由Ecma国际（欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）按照标准制定的一种脚本语言规范。</p>
-<p>JavaScript是按ECMAScript规范实现的一种脚本语言，JavaScript除了实现了ECMAScript规范，还提供了BOM和DOM的操作。</p>
-<h2 id="ECMAScript版本历史"><a href="#ECMAScript版本历史" class="headerlink" title="ECMAScript版本历史"></a>ECMAScript版本历史</h2><ul>
-<li>ES1.0, 1997年06月发布</li>
-<li>ES2.0, 1997年06月发布</li>
-<li><p>ES3.0, 1999年12月发布</p>
+        <h2 id="信息响应"><a href="#信息响应" class="headerlink" title="信息响应"></a>信息响应</h2><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/100" target="_blank" rel="noopener"><code>100 Continue</code></a></p>
+<p>这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它。</p>
 </li>
-<li><p>ES4.0,  由于关于语言的复杂性出现了分歧。放弃发布</p>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/101" target="_blank" rel="noopener"><code>101 Switching Protocol</code></a></p>
+<p>该代码是响应客户端的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Upgrade" target="_blank" rel="noopener"><code>Upgrade</code></a> 标头发送的，并且指示服务器也正在切换的协议。</p>
 </li>
-<li>ES5.0, 2009年12月发布， 增加了严格模式，增加了少量语法，为ES6铺路</li>
-<li>ES6.0, 2015年6月发布，增加了大量的新概念和语法特性<ul>
-<li><strong>第六版的名字， 可以叫做ECMAScript6.0(ES), 也可以叫做ECMAScript 2015（ES2015）</strong></li>
-<li>ECMA组织决定以后每年6月份都会发布一版新的语法标准，比如ES7(ECMAScript 2016) </li>
-<li><strong>通过我们说的ES6泛指ES5之后的下一代标准，涵盖了ES6, ES7, ES8….</strong>  </li>
-</ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/102" target="_blank" rel="noopener"><code>102 Processing</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>此代码表示服务器已收到并正在处理该请求，但没有响应可用。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/103" target="_blank" rel="noopener"><code>103 Early Hints</code></a> </p>
+<p>此状态代码主要用于与<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Link" target="_blank" rel="noopener"><code>Link</code></a> 链接头一起使用，以允许用户代理在服务器仍在准备响应时开始预加载资源。</p>
 </li>
 </ul>
-<h1 id="ES5-数组的新方法"><a href="#ES5-数组的新方法" class="headerlink" title="ES5-数组的新方法"></a>ES5-数组的新方法</h1><h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><p><code>forEach()</code> 方法对数组的每个元素执行一次提供的函数。功能等同于<code>for</code>循环.</p>
-<p>应用场景：为一些相同的元素，绑定事件处理器！</p>
-<p><strong>需求：遍历数组[“张飞”,”关羽”,”赵云”,”马超”]</strong></p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"张飞"</span>,<span class="string">"关羽"</span>,<span class="string">"赵云"</span>,<span class="string">"马超"</span>];</span><br><span class="line"><span class="comment">//第一个参数：element，数组的每一项元素</span></span><br><span class="line"><span class="comment">//第二个参数：index，数组的下标</span></span><br><span class="line"><span class="comment">//第三个参数：array，正在遍历的数组</span></span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">element, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(element, index, array);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p><code>map()</code> 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
-<p><strong>需求：遍历数组，求每一项的平方存在于一个数组中</strong></p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];  <span class="comment">// 1 4 9 16 25</span></span><br><span class="line"><span class="comment">//第一个参数：element，数组的每一项元素</span></span><br><span class="line"><span class="comment">//第二个参数：index，数组的下标</span></span><br><span class="line"><span class="comment">//第三个参数：array，正在遍历的数组</span></span><br><span class="line"><span class="comment">//返回值：一个新数组，每个元素都是回调函数的结果。</span></span><br><span class="line"><span class="keyword">var</span> newArray = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">element, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> element * element;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(newArray);<span class="comment">//[1,4,9,16,25]</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p><code>filter</code>用于过滤掉“不合格”的元素<br>返回一个新数组，如果在回调函数中返回true，那么就留下来，如果返回false，就扔掉</p>
-<p><strong>需求：遍历数组，将数组中工资超过5000的值删除[1000, 5000, 20000, 3000, 10000, 800, 1500]</strong></p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1000</span>, <span class="number">5000</span>, <span class="number">20000</span>, <span class="number">3000</span>, <span class="number">10000</span>, <span class="number">800</span>, <span class="number">1500</span>];</span><br><span class="line"><span class="comment">//第一个参数：element，数组的每一项元素</span></span><br><span class="line"><span class="comment">//第二个参数：index，数组的下标</span></span><br><span class="line"><span class="comment">//第三个参数：array，正在遍历的数组</span></span><br><span class="line"><span class="comment">//返回值：一个新数组，存储了所有返回true的元素</span></span><br><span class="line"><span class="keyword">var</span> newArray = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">element, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(element &gt; <span class="number">5000</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(newArray);<span class="comment">//[1000, 5000, 3000, 800, 1500]</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="some"><a href="#some" class="headerlink" title="some"></a>some</h2><p><code>some</code>用于遍历数组，如果有至少一个满足条件，就返回true，否则返回false。</p>
-<p><strong>需求：遍历数组，判断数组是否包含奇数，[2,4,6,8,10,9]</strong></p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">21</span>];</span><br><span class="line"><span class="comment">//第一个参数：element，数组的每一项元素</span></span><br><span class="line"><span class="comment">//第二个参数：index，数组的下标</span></span><br><span class="line"><span class="comment">//第三个参数：array，正在遍历的数组</span></span><br><span class="line"><span class="comment">//返回值：布尔类型的值，只要有一个回调函数返回true，就返回true</span></span><br><span class="line"><span class="keyword">var</span> flag = arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">element, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(element, index, array);</span><br><span class="line">  <span class="keyword">if</span>(element %<span class="number">2</span> == <span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(flag);<span class="comment">//true</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="every"><a href="#every" class="headerlink" title="every"></a>every</h2><p><code>every</code>用于遍历数组，只有当所有的元素返回true，才返回true，否则返回false。</p>
-<p><strong>需求：遍历数组，判断数组是否都是偶数，[2,4,6,8,10,9]</strong></p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">21</span>];</span><br><span class="line"><span class="comment">//第一个参数：element，数组的每一项元素</span></span><br><span class="line"><span class="comment">//第二个参数：index，数组的下标</span></span><br><span class="line"><span class="comment">//第三个参数：array，正在遍历的数组</span></span><br><span class="line"><span class="comment">//返回值：布尔类型的值，只有当所有的元素返回true，才返回true，否则返回false。</span></span><br><span class="line"><span class="keyword">var</span> flag = arr.every(<span class="function"><span class="keyword">function</span>(<span class="params">element, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(element, index, array);</span><br><span class="line">  <span class="keyword">if</span>(element %<span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(flag);<span class="comment">//false</span></span><br></pre></td></tr></table></figure></div>
-<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
-<p>ES6中提供了两个声明变量的关键字：const和let </p>
-</blockquote>
-<h3 id="let的使用"><a href="#let的使用" class="headerlink" title="let的使用"></a>let的使用</h3><p>ES6 新增了<code>let</code>命令，用来声明变量。它的用法类似于<code>var</code>。</p>
-<ul>
-<li>let声明的变量只有在当前作用域有效</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a <span class="comment">// ReferenceError: a is not defined.</span></span><br><span class="line">b <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>不存在变量提升</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// let 的情况</span></span><br><span class="line"><span class="built_in">console</span>.log(bar); <span class="comment">// 报错ReferenceError</span></span><br><span class="line"><span class="keyword">let</span> bar = <span class="number">2</span>;</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>不允许重复声明</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;<span class="comment">//报错 Identifier 'a' has already been declared</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="const的使用"><a href="#const的使用" class="headerlink" title="const的使用"></a>const的使用</h3><p><code>const</code>声明一个只读的常量。常量：值不可以改变的量 </p>
-<ul>
-<li>const声明的量不可以改变</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.1415</span>;</span><br><span class="line">PI = <span class="number">3</span>; <span class="comment">//报错</span></span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>const声明的变量必须赋值</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num;</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>如果const声明了一个对象，仅仅保证地址不变</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">name</span>:<span class="string">'zs'</span>&#125;;</span><br><span class="line">obj.age = <span class="number">18</span>;<span class="comment">//正确</span></span><br><span class="line">obj = &#123;&#125;;<span class="comment">//报错</span></span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>其他用法和let一样</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 只能在当前代码块中使用</span><br><span class="line"><span class="number">2.</span> 不会提升</span><br><span class="line"><span class="number">3.</span> 不能重复</span><br></pre></td></tr></table></figure></div>
-<h3 id="let与const的使用场景"><a href="#let与const的使用场景" class="headerlink" title="let与const的使用场景"></a>let与const的使用场景</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 如果声明的变量不需要改变，那么使用<span class="keyword">const</span></span><br><span class="line"><span class="number">2.</span> 如果声明的变量需要改变，那么用<span class="keyword">let</span></span><br><span class="line"><span class="number">3.</span> 学了<span class="keyword">const</span>和<span class="keyword">let</span>之后，尽量别用<span class="keyword">var</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><h3 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h3><p>以前，为变量赋值，只能直接指定值。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">let</span> c = <span class="number">3</span>;</span><br></pre></td></tr></table></figure></div>
-<p>ES6 允许写成下面这样。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br></pre></td></tr></table></figure></div>
-<p>解构默认值</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a = <span class="number">0</span>, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br></pre></td></tr></table></figure></div>
-<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><p>解构不仅可以用于数组，还可以用于对象。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; foo, bar &#125; = &#123; <span class="attr">foo</span>: <span class="string">'aaa'</span>, <span class="attr">bar</span>: <span class="string">'bbb'</span> &#125;;</span><br><span class="line">foo <span class="comment">// "aaa"</span></span><br><span class="line">bar <span class="comment">// "bbb"</span></span><br></pre></td></tr></table></figure></div>
-<p>如果变量名与属性名不一致，必须写成下面这样。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; <span class="attr">foo</span>: baz &#125; = &#123; <span class="attr">foo</span>: <span class="string">'aaa'</span>, <span class="attr">bar</span>: <span class="string">'bbb'</span> &#125;;</span><br><span class="line">baz <span class="comment">// "aaa"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">first</span>: <span class="string">'hello'</span>, <span class="attr">last</span>: <span class="string">'world'</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">first</span>: f, <span class="attr">last</span>: l &#125; = obj;</span><br><span class="line">f <span class="comment">// 'hello'</span></span><br><span class="line">l <span class="comment">// 'world'</span></span><br></pre></td></tr></table></figure></div>
-<p>函数的参数也可以使用解构赋值。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">[x, y]</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add([<span class="number">1</span>, <span class="number">2</span>]); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h3><p>传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 jQuery 的方法）。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#result'</span>).append(</span><br><span class="line">  <span class="string">'There are &lt;b&gt;'</span> + basket.count + <span class="string">'&lt;/b&gt; '</span> +</span><br><span class="line">  <span class="string">'items in your basket, '</span> +</span><br><span class="line">  <span class="string">'&lt;em&gt;'</span> + basket.onSale +</span><br><span class="line">  <span class="string">'&lt;/em&gt; are on sale!'</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure></div>
-<p>上面这种写法相当繁琐不方便，ES6 引入了模板字符串解决这个问题。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#result'</span>).append(<span class="string">`</span></span><br><span class="line"><span class="string">  There are &lt;b&gt;<span class="subst">$&#123;basket.count&#125;</span>&lt;/b&gt; items</span></span><br><span class="line"><span class="string">   in your basket, &lt;em&gt;<span class="subst">$&#123;basket.onSale&#125;</span>&lt;/em&gt;</span></span><br><span class="line"><span class="string">  are on sale!</span></span><br><span class="line"><span class="string">`</span>);</span><br></pre></td></tr></table></figure></div>
-<p>字符串模版的优点</p>
-<ul>
-<li>允许换行</li>
-<li>可以使用插值  <code>${}</code></li>
-</ul>
-<h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><ul>
-<li><strong>includes()</strong>：返回布尔值，表示是否找到了参数字符串。</li>
-<li><strong>startsWith()</strong>：返回布尔值，表示参数字符串是否在原字符串的头部。</li>
-<li><strong>endsWith()</strong>：返回布尔值，表示参数字符串是否在原字符串的尾部。</li>
-</ul>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p><strong>find是ES6新增的语法</strong></p>
-<p><code>find()</code> 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank" rel="noopener"><code>undefined</code></a>。 </p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取第一个大于10的数</span></span><br><span class="line"><span class="keyword">var</span> array1 = [<span class="number">5</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">130</span>, <span class="number">44</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> found = array1.find(<span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> element &gt; <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(found);</span><br></pre></td></tr></table></figure></div>
-<h3 id="findexIndex"><a href="#findexIndex" class="headerlink" title="findexIndex"></a>findexIndex</h3><p><strong>findIndex是ES6新增的语法</strong></p>
-<p><code>findIndex()</code>方法返回数组中满足提供的测试函数的第一个元素的<strong>索引</strong>。否则返回-1。 </p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取第一个大于10的下标</span></span><br><span class="line"><span class="keyword">var</span> array1 = [<span class="number">5</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">130</span>, <span class="number">44</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findFirstLargeNumber</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> element &gt; <span class="number">13</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(array1.findIndex(findFirstLargeNumber));</span><br></pre></td></tr></table></figure></div>
-<h2 id="函数-箭头函数"><a href="#函数-箭头函数" class="headerlink" title="函数-箭头函数"></a>函数-箭头函数</h2><p>ES6标准新增了一种新的函数：Arrow Function（箭头函数）。</p>
-<p>为什么叫Arrow Function？因为它的定义用的就是一个箭头：</p>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x + y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">相当于</span><br><span class="line"><span class="comment">//语法： (参数列表) =&gt; &#123;函数体&#125;</span></span><br><span class="line"><span class="keyword">var</span> fn = <span class="function">(<span class="params">x, y</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x + y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h3 id="参数详解"><a href="#参数详解" class="headerlink" title="参数详解"></a>参数详解</h3><ul>
-<li>如果没有参数列表，使用()表示参数列表</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 等同于：</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>如果只有一个参数，可以省略()</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 等同于：</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">n1</span>) </span>&#123;    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="params">n1</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>如果有多个参数，需要使用()把参数列表括起来</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">n1, n2</span>) </span>&#123;    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">n1, n2</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-<h3 id="返回值详解"><a href="#返回值详解" class="headerlink" title="返回值详解"></a>返回值详解</h3><ul>
-<li>如果箭头函数的代码块部分多于一条语句，就要使用大括号将它们括起来</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">n1</span>) </span>&#123;    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="params">n1</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'哈哈'</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>如果函数体只有一行一句，那么可以省略{}和return</li>
-</ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params">n1, n2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n1 + n2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fn = <span class="function">(<span class="params">n1, n2</span>) =&gt;</span> n1 + n2;</span><br></pre></td></tr></table></figure></div>
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ol>
-<li>有一个数组<code>[1,3,5,7,9,2,4,6,8,10]</code>,请对数组进行排序</li>
-<li>有一个数组<code>[&#39;a&#39;,&#39;ccc&#39;,&#39;bb&#39;,&#39;dddd&#39;]</code>,请按照字符串长度对数组进行排序</li>
-<li>有一个数组，<code>[57,88,99,100,33,77]</code>,请保留60分以上的成绩，返回一个新的数组</li>
-</ol>
-<h3 id="箭头函数的注意点"><a href="#箭头函数的注意点" class="headerlink" title="箭头函数的注意点"></a>箭头函数的注意点</h3><ol>
-<li>箭头函数内部没有this，因此箭头函数内部的this指向了外部的this</li>
-<li>箭头函数不能作为构造函数，因为箭头函数没有this</li>
-</ol>
-<p>【定义一个对象，定时器打招呼】</p>
-<p><strong>苦口婆心一下：箭头函数刚开始用，肯定会有点不习惯，但是任何东西都有一个习惯的过程，慢慢接受就好了，多用，多练</strong></p>
-<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">x, y = <span class="string">'World'</span></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x, y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log(<span class="string">'Hello'</span>) <span class="comment">// Hello World</span></span><br><span class="line">log(<span class="string">'Hello'</span>, <span class="string">'China'</span>) <span class="comment">// Hello China</span></span><br><span class="line">log(<span class="string">'Hello'</span>, <span class="string">''</span>) <span class="comment">// Hello</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">...values</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><p>属性简写</p>
-<p>方法简写</p>
-<h3 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h3><h1 id="综合大练习"><a href="#综合大练习" class="headerlink" title="综合大练习"></a>综合大练习</h1><p>给定一个数组</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = [</span><br><span class="line">  <span class="comment">// wu: 武力    zhi:智力</span></span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'张飞'</span>, <span class="attr">wu</span>: <span class="number">97</span>, <span class="attr">zhi</span>: <span class="number">10</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'诸葛亮'</span>, <span class="attr">wu</span>: <span class="number">55</span>, <span class="attr">zhi</span>: <span class="number">99</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">'赵云'</span>, <span class="attr">wu</span>: <span class="number">97</span>, <span class="attr">zhi</span>: <span class="number">66</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">4</span>, <span class="attr">name</span>: <span class="string">'周瑜'</span>, <span class="attr">wu</span>: <span class="number">80</span>, <span class="attr">zhi</span>: <span class="number">98</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">5</span>, <span class="attr">name</span>: <span class="string">'吕布'</span>, <span class="attr">wu</span>: <span class="number">100</span>, <span class="attr">zhi</span>: <span class="number">8</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">id</span>: <span class="number">6</span>, <span class="attr">name</span>: <span class="string">'司马懿'</span>, <span class="attr">wu</span>: <span class="number">30</span>, <span class="attr">zhi</span>: <span class="number">98</span> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li><p>求数组中所有英雄的武力平均值</p>
+<h2 id="成功响应"><a href="#成功响应" class="headerlink" title="成功响应"></a>成功响应</h2><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/200" target="_blank" rel="noopener"><code>200 OK</code></a></p>
+<p>请求成功。成功的含义取决于HTTP方法：GET：资源已被提取并在消息正文中传输。HEAD：实体标头位于消息正文中。POST：描述动作结果的资源在消息体中传输。TRACE：消息正文包含服务器收到的请求消息</p>
 </li>
-<li><p>得到一个新数组，只保留英雄的名字， <code>[&#39;张飞&#39;, &#39;诸葛亮&#39;, &#39;赵云&#39;, &#39;周瑜&#39;, &#39;吕布&#39;, &#39;司马懿&#39;]</code></p>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/201" target="_blank" rel="noopener"><code>201 Created</code></a></p>
+<p>该请求已成功，并因此创建了一个新的资源。这通常是在PUT请求之后发送的响应。</p>
 </li>
-<li>得到一个新数组，新数组中只保留武力值超过90的英雄</li>
-<li>删除数组中名字为周瑜的英雄</li>
-<li>判断数组中所有英雄的武力是否都超过60， 最终打印结果： <code>全是猛将</code>  <code>还有弱鸡</code>     使用两种方式实现</li>
-<li>删除数组中名字叫所有智力低于60的英雄</li>
-<li>找到数组中id为2的英雄，求他的武力+智力的综合</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/202" target="_blank" rel="noopener"><code>202 Accepted</code></a></p>
+<p>请求已经接收到，但还未响应，没有结果。意味着不会有一个异步的响应去表明当前请求的结果，预期另外的进程和服务去处理请求，或者批处理。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/203" target="_blank" rel="noopener"><code>203 Non-Authoritative Information</code></a></p>
+<p>服务器已成功处理了请求，但返回的实体头部元信息不是在原始服务器上有效的确定集合，而是来自本地或者第三方的拷贝。当前的信息可能是原始版本的子集或者超集。例如，包含资源的元数据可能导致原始服务器知道元信息的超集。使用此状态码不是必须的，而且只有在响应不使用此状态码便会返回200 OK的情况下才是合适的。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/204" target="_blank" rel="noopener"><code>204 No Content</code></a></p>
+<p>服务器成功处理了请求，但不需要返回任何实体内容，并且希望返回更新了的元信息。响应可能通过实体头部的形式，返回新的或更新后的元信息。如果存在这些头部信息，则应当与所请求的变量相呼应。如果客户端是浏览器的话，那么用户浏览器应保留发送了该请求的页面，而不产生任何文档视图上的变化，即使按照规范新的或更新后的元信息应当被应用到用户浏览器活动视图中的文档。由于204响应被禁止包含任何消息体，因此它始终以消息头后的第一个空行结尾。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/205" target="_blank" rel="noopener"><code>205 Reset Content</code></a></p>
+<p>服务器成功处理了请求，且没有返回任何内容。但是与204响应不同，返回此状态码的响应要求请求者重置文档视图。该响应主要是被用于接受用户输入后，立即重置表单，以便用户能够轻松地开始另一次输入。与204响应一样，该响应也被禁止包含任何消息体，且以消息头后的第一个空行结束。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/206" target="_blank" rel="noopener"><code>206 Partial Content</code></a></p>
+<p>服务器已经成功处理了部分 GET 请求。类似于 FlashGet 或者迅雷这类的 HTTP 下载工具都是使用此类响应实现断点续传或者将一个大文档分解为多个下载段同时下载。该请求必须包含 Range 头信息来指示客户端希望得到的内容范围，并且可能包含 If-Range 来作为请求条件。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/207" target="_blank" rel="noopener"><code>207 Multi-Status</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>由WebDAV(RFC 2518)扩展的状态码，代表之后的消息体将是一个XML消息，并且可能依照之前子请求数量的不同，包含一系列独立的响应代码。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/208" target="_blank" rel="noopener"><code>208 Multi-Status</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>在 DAV 里面使用: propstat 响应元素以避免重复枚举多个绑定的内部成员到同一个集合。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/226" target="_blank" rel="noopener"><code>226 IM Used</code></a> (<a href="https://tools.ietf.org/html/rfc3229" target="_blank" rel="noopener">HTTP Delta encoding</a>)</p>
+<p>服务器已经完成了对资源的 GET 请求，并且响应是对当前实例应用的一个或多个实例操作结果的表示。</p>
+</li>
 </ul>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line"><span class="keyword">const</span> inventors = [</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Albert'</span>, <span class="attr">last</span>: <span class="string">'Einstein'</span>, <span class="attr">year</span>: <span class="number">1879</span>, <span class="attr">passed</span>: <span class="number">1955</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Isaac'</span>, <span class="attr">last</span>: <span class="string">'Newton'</span>, <span class="attr">year</span>: <span class="number">1643</span>, <span class="attr">passed</span>: <span class="number">1727</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Galileo'</span>, <span class="attr">last</span>: <span class="string">'Galilei'</span>, <span class="attr">year</span>: <span class="number">1564</span>, <span class="attr">passed</span>: <span class="number">1642</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Marie'</span>, <span class="attr">last</span>: <span class="string">'Curie'</span>, <span class="attr">year</span>: <span class="number">1867</span>, <span class="attr">passed</span>: <span class="number">1934</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Johannes'</span>, <span class="attr">last</span>: <span class="string">'Kepler'</span>, <span class="attr">year</span>: <span class="number">1571</span>, <span class="attr">passed</span>: <span class="number">1630</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Nicolaus'</span>, <span class="attr">last</span>: <span class="string">'Copernicus'</span>, <span class="attr">year</span>: <span class="number">1473</span>, <span class="attr">passed</span>: <span class="number">1543</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Max'</span>, <span class="attr">last</span>: <span class="string">'Planck'</span>, <span class="attr">year</span>: <span class="number">1858</span>, <span class="attr">passed</span>: <span class="number">1947</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Katherine'</span>, <span class="attr">last</span>: <span class="string">'Blodgett'</span>, <span class="attr">year</span>: <span class="number">1898</span>, <span class="attr">passed</span>: <span class="number">1979</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Ada'</span>, <span class="attr">last</span>: <span class="string">'Lovelace'</span>, <span class="attr">year</span>: <span class="number">1815</span>, <span class="attr">passed</span>: <span class="number">1852</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Sarah E.'</span>, <span class="attr">last</span>: <span class="string">'Goode'</span>, <span class="attr">year</span>: <span class="number">1855</span>, <span class="attr">passed</span>: <span class="number">1905</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Lise'</span>, <span class="attr">last</span>: <span class="string">'Meitner'</span>, <span class="attr">year</span>: <span class="number">1878</span>, <span class="attr">passed</span>: <span class="number">1968</span> &#125;,</span><br><span class="line">     &#123; <span class="attr">first</span>: <span class="string">'Hanna'</span>, <span class="attr">last</span>: <span class="string">'Hammarström'</span>, <span class="attr">year</span>: <span class="number">1829</span>, <span class="attr">passed</span>: <span class="number">1909</span> &#125;</span><br><span class="line">   ];</span><br><span class="line"></span><br><span class="line">   要求<span class="number">1</span>：筛选出生日期在<span class="number">16</span>世纪（<span class="number">1500</span><span class="number">-1599</span>年）的发明家。</span><br><span class="line">   要求<span class="number">2</span>：列出发明家的名和姓的数组。</span><br><span class="line">   要求<span class="number">3</span>：根据发明家的出生日期，按照从大到小的顺序进行排序。</span><br><span class="line">   要求<span class="number">4</span>：所有的发明家一共活了多少岁。</span><br><span class="line">   要求<span class="number">5</span>：按照发明家的年龄大小    排序</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/300" target="_blank" rel="noopener"><code>300 Multiple Choice</code></a></p>
+<p>被请求的资源有一系列可供选择的回馈信息，每个都有自己特定的地址和浏览器驱动的商议信息。用户或浏览器能够自行选择一个首选的地址进行重定向。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/301" target="_blank" rel="noopener"><code>301 Moved Permanently</code></a></p>
+<p>被请求的资源已永久移动到新位置，并且将来任何对此资源的引用都应该使用本响应返回的若干个 URI 之一。如果可能，拥有链接编辑功能的客户端应当自动把请求的地址修改为从服务器反馈回来的地址。除非额外指定，否则这个响应也是可缓存的。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/302" target="_blank" rel="noopener"><code>302 Found</code></a></p>
+<p>请求的资源现在临时从不同的 URI 响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/303" target="_blank" rel="noopener"><code>303 See Other</code></a></p>
+<p>对应当前请求的响应可以在另一个 URI 上被找到，而且客户端应当采用 GET 的方式访问那个资源。这个方法的存在主要是为了允许由脚本激活的POST请求输出重定向到一个新的资源。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/304" target="_blank" rel="noopener"><code>304 Not Modified</code></a></p>
+<p>如果客户端发送了一个带条件的 GET 请求且该请求已被允许，而文档的内容（自上次访问以来或者根据请求的条件）并没有改变，则服务器应当返回这个状态码。304 响应禁止包含消息体，因此始终以消息头后的第一个空行结尾。</p>
+</li>
+<li><p><code>305 Use Proxy</code> </p>
+<p>被请求的资源必须通过指定的代理才能被访问。Location 域中将给出指定的代理所在的 URI 信息，接收者需要重复发送一个单独的请求，通过这个代理才能访问相应资源。只有原始服务器才能建立305响应。</p>
+</li>
+<li><p><code>306 unused</code></p>
+<p>在最新版的规范中，306 状态码已经不再被使用。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/307" target="_blank" rel="noopener"><code>307 Temporary Redirect</code></a></p>
+<p>请求的资源现在临时从不同的URI 响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/308" target="_blank" rel="noopener"><code>308 Permanent Redirect</code></a></p>
+<p>这意味着资源现在永久位于由 <code>Location:</code> HTTP Response 标头指定的另一个 URI。 这与 <code>301 Moved Permanently HTTP</code> 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 <code>POST</code>，则必须在第二个请求中使用 <code>POST</code>。</p>
+</li>
+</ul>
+<h2 id="客户端响应"><a href="#客户端响应" class="headerlink" title="客户端响应"></a>客户端响应</h2><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/400" target="_blank" rel="noopener"><code>400 Bad Request</code></a></p>
+<p>1、语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重复提交这个请求。</p>
+<p>2、请求参数有误。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/401" target="_blank" rel="noopener"><code>401 Unauthorized</code></a></p>
+<p>当前请求需要用户验证。该响应必须包含一个适用于被请求资源的 WWW-Authenticate 信息头用以询问用户信息。客户端可以重复提交一个包含恰当的 Authorization 头信息的请求。如果当前请求已经包含了 Authorization 证书，那么401响应代表着服务器验证已经拒绝了那些证书。如果401响应包含了与前一个响应相同的身份验证询问，且浏览器已经至少尝试了一次验证，那么浏览器应当向用户展示响应中包含的实体信息，因为这个实体信息中可能包含了相关诊断信息。</p>
+</li>
+<li><p><code>402 Payment Required</code></p>
+<p>此响应码保留以便将来使用，创造此响应码的最初目的是用于数字支付系统，然而现在并未使用。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/403" target="_blank" rel="noopener"><code>403 Forbidden</code></a></p>
+<p>服务器已经理解请求，但是拒绝执行它。与 401 响应不同的是，身份验证并不能提供任何帮助，而且这个请求也不应该被重复提交。如果这不是一个 HEAD 请求，而且服务器希望能够讲清楚为何请求不能被执行，那么就应该在实体内描述拒绝的原因。当然服务器也可以返回一个 404 响应，假如它不希望让客户端获得任何信息。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/404" target="_blank" rel="noopener"><code>404 Not Found</code></a></p>
+<p>请求失败，请求所希望得到的资源未被在服务器上发现。没有信息能够告诉用户这个状况到底是暂时的还是永久的。假如服务器知道情况的话，应当使用410状态码来告知旧资源因为某些内部的配置机制问题，已经永久的不可用，而且没有任何可以跳转的地址。404这个状态码被广泛应用于当服务器不想揭示到底为何请求被拒绝或者没有其他适合的响应可用的情况下。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/405" target="_blank" rel="noopener"><code>405 Method Not Allowed</code></a></p>
+<p>请求行中指定的请求方法不能被用于请求相应的资源。该响应必须返回一个Allow 头信息用以表示出当前资源能够接受的请求方法的列表。 鉴于 PUT，DELETE 方法会对服务器上的资源进行写操作，因而绝大部分的网页服务器都不支持或者在默认配置下不允许上述请求方法，对于此类请求均会返回405错误。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/406" target="_blank" rel="noopener"><code>406 Not Acceptable</code></a></p>
+<p>请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/407" target="_blank" rel="noopener"><code>407 Proxy Authentication Required</code></a></p>
+<p>与401响应类似，只不过客户端必须在代理服务器上进行身份验证。代理服务器必须返回一个 Proxy-Authenticate 用以进行身份询问。客户端可以返回一个 Proxy-Authorization 信息头用以验证。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/408" target="_blank" rel="noopener"><code>408 Request Timeout</code></a></p>
+<p>请求超时。客户端没有在服务器预备等待的时间内完成一个请求的发送。客户端可以随时再次提交这一请求而无需进行任何更改。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/409" target="_blank" rel="noopener"><code>409 Conflict</code></a></p>
+<p>由于和被请求的资源的当前状态之间存在冲突，请求无法完成。这个代码只允许用在这样的情况下才能被使用：用户被认为能够解决冲突，并且会重新提交新的请求。该响应应当包含足够的信息以便用户发现冲突的源头。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/410" target="_blank" rel="noopener"><code>410 Gone</code></a></p>
+<p>被请求的资源在服务器上已经不再可用，而且没有任何已知的转发地址。这样的状况应当被认为是永久性的。如果可能，拥有链接编辑功能的客户端应当在获得用户许可后删除所有指向这个地址的引用。如果服务器不知道或者无法确定这个状况是否是永久的，那么就应该使用 404 状态码。除非额外说明，否则这个响应是可缓存的。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/411" target="_blank" rel="noopener"><code>411 Length Required</code></a></p>
+<p>服务器拒绝在没有定义 <code>Content-Length</code> 头的情况下接受请求。在添加了表明请求消息体长度的有效 <code>Content-Length</code> 头之后，客户端可以再次提交该请求。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/412" target="_blank" rel="noopener"><code>412 Precondition Failed</code></a></p>
+<p>服务器在验证在请求的头字段中给出先决条件时，没能满足其中的一个或多个。这个状态码允许客户端在获取资源时在请求的元信息（请求头字段数据）中设置先决条件，以此避免该请求方法被应用到其希望的内容以外的资源上。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/413" target="_blank" rel="noopener"><code>413 Payload Too Large</code></a></p>
+<p>服务器拒绝处理当前请求，因为该请求提交的实体数据大小超过了服务器愿意或者能够处理的范围。此种情况下，服务器可以关闭连接以免客户端继续发送此请求。如果这个状况是临时的，服务器应当返回一个 <code>Retry-After</code> 的响应头，以告知客户端可以在多少时间以后重新尝试。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/414" target="_blank" rel="noopener"><code>414 URI Too Long</code></a></p>
+<p>请求的URI 长度超过了服务器能够解释的长度，因此服务器拒绝对该请求提供服务。这比较少见，通常的情况包括：本应使用POST方法的表单提交变成了GET方法，导致查询字符串（Query String）过长。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/415" target="_blank" rel="noopener"><code>415 Unsupported Media Type</code></a></p>
+<p>对于当前请求的方法和所请求的资源，请求中提交的实体并不是服务器中所支持的格式，因此请求被拒绝。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/416" target="_blank" rel="noopener"><code>416 Requested Range Not Satisfiable</code></a></p>
+<p>如果请求中包含了 Range 请求头，并且 Range 中指定的任何数据范围都与当前资源的可用范围不重合，同时请求中又没有定义 If-Range 请求头，那么服务器就应当返回416状态码。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/417" target="_blank" rel="noopener"><code>417 Expectation Failed</code></a></p>
+<p>此响应代码意味着服务器无法满足 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Expect" target="_blank" rel="noopener"><code>Expect</code></a> 请求标头字段指示的期望值。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/418" target="_blank" rel="noopener"><code>418 I&#39;m a teapot</code></a></p>
+<p>服务器拒绝尝试用 <code>“茶壶冲泡咖啡”</code>。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/421" target="_blank" rel="noopener"><code>421 Misdirected Request</code></a></p>
+<p>该请求针对的是无法产生响应的服务器。 这可以由服务器发送，该服务器未配置为针对包含在请求 URI 中的方案和权限的组合产生响应。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/422" target="_blank" rel="noopener"><code>422 Unprocessable Entity</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>请求格式良好，但由于语义错误而无法遵循。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/423" target="_blank" rel="noopener"><code>423 Locked</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>正在访问的资源被锁定。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/424" target="_blank" rel="noopener"><code>424 Failed Dependency</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>由于先前的请求失败，所以此次请求失败。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/425" target="_blank" rel="noopener"><code>425 Too Early</code></a></p>
+<p>服务器不愿意冒着风险去处理可能重播的请求。</p>
+</li>
+<li></li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/426" target="_blank" rel="noopener"><code>426 Upgrade Required</code></a></p>
+<p>服务器拒绝使用当前协议执行请求，但可能在客户机升级到其他协议后愿意这样做。 服务器在 426 响应中发送 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Upgrade" target="_blank" rel="noopener"><code>Upgrade</code></a> 头以指示所需的协议。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/428" target="_blank" rel="noopener"><code>428 Precondition Required</code></a></p>
+<p>原始服务器要求该请求是有条件的。 旨在防止“丢失更新”问题，即客户端获取资源状态，修改该状态并将其返回服务器，同时第三方修改服务器上的状态，从而导致冲突。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/429" target="_blank" rel="noopener"><code>429 Too Many Requests</code></a></p>
+<p>用户在给定的时间内发送了太多请求（“限制请求速率”）。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/431" target="_blank" rel="noopener"><code>431 Request Header Fields Too Large</code></a></p>
+<p>服务器不愿意处理请求，因为它的 请求头字段太大（ Request Header Fields Too Large）。 请求可以在减小请求头字段的大小后重新提交。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/451" target="_blank" rel="noopener"><code>451 Unavailable For Legal Reasons</code></a></p>
+<p>用户请求非法资源，例如：由政府审查的网页。</p>
+</li>
+</ul>
+<h2 id="服务端响应"><a href="#服务端响应" class="headerlink" title="服务端响应"></a>服务端响应</h2><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/500" target="_blank" rel="noopener"><code>500 Internal Server Error</code></a></p>
+<p>服务器遇到了不知道如何处理的情况。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/501" target="_blank" rel="noopener"><code>501 Not Implemented</code></a></p>
+<p>此请求方法不被服务器支持且无法被处理。只有<code>GET</code>和<code>HEAD</code>是要求服务器支持的，它们必定不会返回此错误代码。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/502" target="_blank" rel="noopener"><code>502 Bad Gateway</code></a></p>
+<p>此错误响应表明服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/503" target="_blank" rel="noopener"><code>503 Service Unavailable</code></a></p>
+<p>服务器没有准备好处理请求。 常见原因是服务器因维护或重载而停机。 请注意，与此响应一起，应发送解释问题的用户友好页面。 这个响应应该用于临时条件和 <code>Retry-After</code>：如果可能的话，HTTP头应该包含恢复服务之前的估计时间。 网站管理员还必须注意与此响应一起发送的与缓存相关的标头，因为这些临时条件响应通常不应被缓存。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/504" target="_blank" rel="noopener"><code>504 Gateway Timeout</code></a></p>
+<p>当服务器作为网关，不能及时得到响应时返回此错误代码。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/505" target="_blank" rel="noopener"><code>505 HTTP Version Not Supported</code></a></p>
+<p>服务器不支持请求中所使用的HTTP协议版本。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/506" target="_blank" rel="noopener"><code>506 Variant Also Negotiates</code></a></p>
+<p>服务器有一个内部配置错误：对请求的透明内容协商导致循环引用。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/507" target="_blank" rel="noopener"><code>507 Insufficient Storage</code></a></p>
+<p>服务器有内部配置错误：所选的变体资源被配置为参与透明内容协商本身，因此不是协商过程中的适当端点。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/508" target="_blank" rel="noopener"><code>508 Loop Detected</code></a> (<a href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV" target="_blank" rel="noopener">WebDAV</a>)</p>
+<p>服务器在处理请求时检测到无限循环。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/510" target="_blank" rel="noopener"><code>510 Not Extended</code></a></p>
+<p>客户端需要对请求进一步扩展，服务器才能实现它。服务器会回复客户端发出扩展请求所需的所有信息。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/511" target="_blank" rel="noopener"><code>511 Network Authentication Required</code></a></p>
+<p>511 状态码指示客户端需要进行身份验证才能获得网络访问权限。</p>
+</li>
+</ul>
 
       
     </div>
@@ -247,7 +295,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
   </nav>
 
 
@@ -256,7 +304,7 @@
   
     <div class="widget-box">
   <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.jpeg" title="图片来自网络">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="图片来自网络"></img>
     <h3 class="avatar-name">
       
         半城狂沙
@@ -282,7 +330,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -292,6 +340,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/07/14/react/">React笔记一</a>
+          </li>
         
           <li>
             <a href="/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/">关于对象的六种继承方法继承的优点与缺点总结</a>
@@ -307,10 +359,6 @@
         
           <li>
             <a href="/2019/05/29/01-ES6笔记/">ES6特性</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/29/jQeury全部/">JQeury</a>
           </li>
         
       </ul>

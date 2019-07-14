@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
 
@@ -41,9 +41,13 @@
   <div class="head-box global-width">
     <nav class="nav-box nav-right">
       
-        <a class="nav-item" href="/" title>首页</a>
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
       
-        <a class="nav-item" href="/archives" title>归档</a>
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
       
     </nav>
   </div>
@@ -51,21 +55,21 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
-    <article id="post-node操作MySQL的一些方法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+    <article id="post-关于对象的六种继承方法继承的优点与缺点总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/03/node操作MySQL的一些方法/">关于node中关于mysql的一些方法总结</a>
+      <a class="article-title" href="/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/">关于对象的六种继承方法继承的优点与缺点总结</a>
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/06/03/node操作MySQL的一些方法/" class="article-date">
-  <time datetime="2019-06-03T12:57:36.000Z" itemprop="datePublished">2019-06-03</time>
+    <a href="/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/" class="article-date">
+  <time datetime="2019-06-03T13:08:53.000Z" itemprop="datePublished">2019-06-03</time>
 </a>
     
     
@@ -76,40 +80,54 @@
     
     <div class="article-content article-content-doorframe" itemprop="articleBody">
       
-        <p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003214841067-1469965922.png" alt="img"></p>
-<p>server.js   =》  node.js的服务器启动文件</p>
-<p>db.js   =》  数据库操作文件</p>
-<p>views  =》  存放模板文件，也就是所有的页面存放的地方</p>
-<p>public =》  存放所有静态资源的地方，比如css js images之类的</p>
-<p>首先介绍一下node.js连接MySQL的步骤，第一步，需要安装一个叫做MySQL的npm包，这个包是官方提供的，稳定性是可以保证的，当然，也还有其他的npm包，这里我们只使用mysql包。安装的方法很简单了，输入指令 npm install mysql –save,等待下载完成.<img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003214602551-1989507469.png" alt="img"></p>
-<p>看到这个样子，那就是安装成功了。</p>
-<p>然后我们打开db.js文件，在里面写入数据库中操作必须的一些代码，看下图：</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003215822629-712280533.png" alt="img"></p>
-<p>代码很少，意思也很明显，第一步需要引入以mysql包，然后我们创建一个空对象，并且给他赋值一个叫query的方法，这个方法接受两个参数，第一个参数是你查询数据时候的sql语句，第二个参数是获取查询结果的回调函数。</p>
-<p>再看函数内部，第一块代码是用来设置操作mysql的配置的：</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003220223957-790659095.png" alt="img"></p>
-<p>host表示mysql安装的地址，因为我是本地的数据库，所以直接使用localhost</p>
-<p>user表示mysql的用户名</p>
-<p>password表示mysql的密码</p>
-<p>database表示你要选择操作的具体的库的名字</p>
-<p>port表示端口，可不填，默认就是3306</p>
-<p><strong>mysql.createConnection的返回值connection是我们接下来操作mysql的一个具体的对象，所有的操作方法都是基于他的。</strong></p>
-<p>调用connection的connect方法判断连接是否成功，如果失败，则把错误信息打印出来，并且停止运行。</p>
-<p><strong><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003220651426-733844841.png" alt="img"></strong></p>
-<p>调用connection的query方法来直接向数据库发送sql语句，并且把用回调函数返回结果，其中回调函数中有三个参数，第一参数是错误对象，如果操作失败，则会停止并打印错误信息，第二参数是具体的返回的结果，正常情况下是一个数组，里面包含很多json,第三个参数也是一个数组，里面包含着最每个数据的解释，比如当前数据属于哪个库，那张表等等。我们使用最多的自然是第二个参数了</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003220827629-1365845018.png" alt="img"></p>
-<p> 当数据库操作结束以后关闭连接</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003221827879-881111252.png" alt="img"></p>
-<p>整个过程很简单，只是其中有两个问题，第一个是数据库连接丢失的问题，不知道有没有人碰到过，第一次访问首页的时候，连接数据库正常，第二次访问首页，数据库连接不上了，会报错说连接丢失。这个原因是我们每操作完一次数据库就关闭了数据库连接，再次访问的时候就找不到连接了，但是连接又不能不关闭，有人可能觉得奇怪，每次访问首页时候都会访问db.js文件，不是每次都会有一个新连接产生吗？是的，只是我最开始的时候生成连接的那段代码并没有放到db.query的函数中，而是放在外面，如下图：</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003222545426-688869672.png" alt="img"></p>
-<p>这样就导致连接只生成一次，关闭了以后，第二采访得不到连接。把它放在函数里面以后，使用exports对外暴露接口。每次访问首页，都会重新走一遍创建连接的过程，每次都能拿到一个新的连接，这样访问就没有问题了。其实项目中可以直接使用连接池。省去了很多麻烦。</p>
-<p>第二个问题是我们在server.js中引入了db.js</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003222936254-145560864.png" alt="img"></p>
-<p>此时大家可能看到了，mysql.query有两个参数，第一个是sql,第二个是回调函数，回调函数有一个result的参数，其实他就是数据库查询出来的结果。有人会说为什么不直接在db.js中使用return，把查询结果返回，搞什么回调啊！</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003223337739-1558231183.png" alt="img"></p>
-<p>其实这里就是node.js的异步造成的一些问题了，如果我们把server.js中的代码改成下图</p>
-<p><img src="https://images2015.cnblogs.com/blog/775923/201610/775923-20161003223539317-827536391.png" alt="img"></p>
-<p>因为我们看到了mysql包的query方法是异步操作，这就导致下面的res.render()方法不会等待他把结果查询出来以后再执行，往往是结果还没出来，就已经开始渲染页面，但是数据又没有得到，所以就会报错了。因此只好传送了一个回调函数进去，在mysql的query方法结束以后，把结果通过参数传入到我们自己写的回调函数中，这样我们就能在回调函数里得到结果了。然后再执行渲染。当然处理这个问题还可以引入第三方包 async来解决异步问题，具体看个人了。</p>
+        <p>想要继承，就必须要提供个父类（继承谁，提供继承的属性）</p>
+<p>　　　　<img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105141131753-1515292318.png" alt="img"></p>
+<p>　　<strong>一、原型链继承</strong></p>
+<p>　　　　<img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105142159784-2086058141.png" alt="img"></p>
+<p>　　　　重点：让新实例的原型等于父类的实例。</p>
+<p>　　　　特点：1、实例可继承的属性有：实例的构造函数的属性，父类构造函数属性，父类原型的属性。（新实例不会继承父类实例的属性！）</p>
+<p>　　　　缺点：1、新实例无法向父类构造函数传参。</p>
+<p>　　　　　　　2、继承单一。</p>
+<p>　　　　　　　3、所有新实例都会共享父类实例的属性。（原型上的属性是共享的，一个实例修改了原型属性，另一个实例的原型属性也会被修改！）</p>
+<p>　　</p>
+<p>　　<strong>二、借用构造函数继承</strong></p>
+<p>　　　　<strong><img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105145831456-1753461572.png" alt="img"></strong></p>
+<p>　　　　重点：用.call()和.apply()将父类构造函数引入子类函数（在子类函数中做了父类函数的自执行（复制））</p>
+<p>　　　　特点：1、只继承了父类构造函数的属性，没有继承父类原型的属性。</p>
+<p>　　　　　　　2、解决了原型链继承缺点1、2、3。</p>
+<p>　　　　　　　3、可以继承多个构造函数属性（call多个）。</p>
+<p>　　　　　　　4、在子实例中可向父实例传参。</p>
+<p>　　　　缺点：1、只能继承父类构造函数的属性。</p>
+<p>　　　　　　　2、无法实现构造函数的复用。（每次用每次都要重新调用）</p>
+<p>　　　　　　　3、每个新实例都有父类构造函数的副本，臃肿。</p>
+<p>　　<strong>三、组合继承（组合原型链继承和借用构造函数继承）（常用）</strong></p>
+<p>　　　　<img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180105155605534-390785677.png" alt="img"></p>
+<p>　　　　重点：<strong>结合了两种模式的优点，传参和复用</strong></p>
+<p>　　　　特点：1、可以继承父类原型上的属性，可以传参，可复用。</p>
+<p>　　　　　　　2、每个新实例引入的构造函数属性是私有的。</p>
+<p>　　　　缺点：调用了两次父类构造函数（耗内存），子类的构造函数会代替原型上的那个父类构造函数。</p>
+<p>　　<strong>四、原型式继承</strong></p>
+<p>　　　　<strong><img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180106215835940-1606427226.png" alt="img"></strong></p>
+<p>　　　　重点：用一个函数包装一个对象，然后返回这个函数的调用，这个函数就变成了个可以随意增添属性的实例或对象。object.create()就是这个原理。</p>
+<p>　　　　特点：类似于复制一个对象，用函数来包装。</p>
+<p>　　　　缺点：1、所有实例都会继承原型上的属性。</p>
+<p>　　　　　　　2、无法实现复用。（新实例属性都是后面添加的）</p>
+<p>　　</p>
+<p>　　<strong>五、寄生式继承</strong></p>
+<p>　　　　<strong><img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180106230703768-1647906557.png" alt="img"></strong></p>
+<p>　　　　重点：就是给原型式继承外面套了个壳子。</p>
+<p>　　　　优点：没有创建自定义类型，因为只是套了个壳子返回对象（这个），这个函数顺理成章就成了创建的新对象。</p>
+<p>　　　　缺点：没用到原型，无法复用。</p>
+<p>　　　　</p>
+<p>　　<strong>六、寄生组合式继承（常用）</strong></p>
+<p>　　　　寄生：在函数内返回对象然后调用</p>
+<p>　　　　组合：1、函数的原型等于另一个实例。2、在函数中用apply或者call引入另一个构造函数，可传参　</p>
+<p> 　　　　<img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180107014609737-663376247.png" alt="img"></p>
+<p>　　</p>
+<p>　　　　<img src="https://images2017.cnblogs.com/blog/1171086/201801/1171086-20180107013758206-57906529.png" alt="img"></p>
+<p>　　　　重点：修复了组合继承的问题</p>
+<p>　　　　继承这些知识点与其说是对象的继承，更像是函数的功能用法，如何用函数做到复用，组合，这些和使用继承的思考是一样的。上述几个继承的方法都可以手动修复他们的缺点，但就是多了这个手动修复就变成了另一种继承模式。</p>
+<p>　　　　这些继承模式的学习重点是学它们的思想，不然你会在coding书本上的例子的时候，会觉得明明可以直接继承为什么还要搞这么麻烦。就像原型式继承它用函数复制了内部对象的一个副本，这样不仅可以继承内部对象的属性，还能把函数（对象，来源内部对象的返回）随意调用，给它们添加属性，改个参数就可以改变原型对象，而这些新增的属性也不会相互影响。</p>
 
       
     </div>
@@ -124,7 +142,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 
@@ -133,7 +151,7 @@
   
     <div class="widget-box">
   <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.jpeg" title="图片来自网络">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="图片来自网络"></img>
     <h3 class="avatar-name">
       
         半城狂沙
@@ -159,7 +177,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -169,6 +187,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/07/14/react/">React笔记一</a>
+          </li>
         
           <li>
             <a href="/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/">关于对象的六种继承方法继承的优点与缺点总结</a>
@@ -184,10 +206,6 @@
         
           <li>
             <a href="/2019/05/29/01-ES6笔记/">ES6特性</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/29/jQeury全部/">JQeury</a>
           </li>
         
       </ul>
