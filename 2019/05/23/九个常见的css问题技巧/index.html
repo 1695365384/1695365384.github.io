@@ -1,22 +1,91 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+
+
 
   
-  <title>九个常见的css技巧 | 前端小菜鸡</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
-  
-  <meta name="description" content="9 个 CSS 技巧 特此声明，这里说的 CSS 并不止包含 CSS，也包含 CSS 预处理器（Less Sass 等），愿各位看官不要纠结于此。  正文现在开始。 1. 建议使用 padding 代替 margin我们在设计稿还原的时候，padding 和 margin 两个是常用的属性，但我们知道属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠，所以如果 margin 使用">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="9 个 CSS 技巧 特此声明，这里说的 CSS 并不止包含 CSS，也包含 CSS 预处理器（Less Sass 等），愿各位看官不要纠结于此。  正文现在开始。 1. 建议使用 padding 代替 margin我们在设计稿还原的时候，padding 和 margin 两个是常用的属性，但我们知道属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠，所以如果 margin 使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="九个常见的css技巧">
 <meta property="og:url" content="http://yoursite.com/2019/05/23/九个常见的css问题技巧/index.html">
-<meta property="og:site_name" content="前端小菜鸡">
+<meta property="og:site_name" content="Bundy">
 <meta property="og:description" content="9 个 CSS 技巧 特此声明，这里说的 CSS 并不止包含 CSS，也包含 CSS 预处理器（Less Sass 等），愿各位看官不要纠结于此。  正文现在开始。 1. 建议使用 padding 代替 margin我们在设计稿还原的时候，padding 和 margin 两个是常用的属性，但我们知道属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠，所以如果 margin 使用">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="536" height="135">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/4/16a836829ff3e55a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"/>
 <meta property="og:updated_time" content="2019-05-26T01:55:11.883Z"/>
@@ -24,70 +93,284 @@
 <meta name="twitter:title" content="九个常见的css技巧"/>
 <meta name="twitter:description" content="9 个 CSS 技巧 特此声明，这里说的 CSS 并不止包含 CSS，也包含 CSS 预处理器（Less Sass 等），愿各位看官不要纠结于此。  正文现在开始。 1. 建议使用 padding 代替 margin我们在设计稿还原的时候，padding 和 margin 两个是常用的属性，但我们知道属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠，所以如果 margin 使用"/>
 <meta name="twitter:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="536" height="135">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/23/九个常见的css问题技巧/"/>
+
+
+
+
+
+  <title>九个常见的css技巧 | Bundy</title>
   
-    <link rel="alternate" href="/atom.xml" title="前端小菜鸡" type="application/atom+xml"/>
-  
-  
-    <link rel="icon" href="/images/default-avatar.jpeg"/>
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"/>
-  
-  <link rel="stylesheet" href="/css/style.css"/>
-  <link rel="stylesheet" href="/css/highlight.css"/>
+
+
+
+
+
+
+
+
 </svg></svg></head>
-</html>
-<body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="图片来自网络">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-right">
-      
-        <a class="nav-item" href="/" title
-        
-        >首页</a>
-      
-        <a class="nav-item" href="/archives" title
-        
-        >归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-九个常见的css问题技巧" class="article global-container article-type-post" itemscope itemprop="blogPost">
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
-    <header class="article-header">
-      
   
-    <h1 class="article-title" itemprop="name">
-      九个常见的css技巧
-    </h1>
+    
   
 
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bundy</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
     </header>
-  
-  <div class="article-meta">
-    <a href="/2019/05/23/九个常见的css问题技巧/" class="article-date">
-  <time datetime="2019-05-23T03:45:23.000Z" itemprop="datePublished">2019-05-23</time>
-</a>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-    
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
+
   
 
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/九个常见的css问题技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bundy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/44278926?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bundy">
+    </span>
+
     
-    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">九个常见的css技巧</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T11:45:23+08:00">
+                2019-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/23/九个常见的css问题技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/23/九个常见的css问题技巧/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <h1 id="9-个-CSS-技巧"><a href="#9-个-CSS-技巧" class="headerlink" title="9 个 CSS 技巧"></a>9 个 CSS 技巧</h1><blockquote>
 <p>特此声明，这里说的 CSS 并不止包含 CSS，也包含 CSS 预处理器（Less Sass 等），愿各位看官不要纠结于此。</p>
@@ -121,7 +404,7 @@
 <p><strong>比较小的图案</strong></p>
 <p>比如需要我们画一个 r 为 5px 的圆，如果我们使用 rem 作为单位，我们很快会发现在一些机型上的图案不圆，会呈现椭圆形。这是由于 rem 转 px 会存在精度丢失问题。</p>
 <p>所以这个时候我们就需要使用 px 配合 dpr 来实现：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// less </span><br><span class="line">/*@size 建议取双数*/</span><br><span class="line">.circle(@size, @backgroundColor) &#123;  </span><br><span class="line">    width: @size;</span><br><span class="line">    height: @size;</span><br><span class="line">    background-color: @backgroundColor;</span><br><span class="line">    [data-dpr=&quot;1&quot;] &amp; &#123;</span><br><span class="line">        width: @size * 0.5;</span><br><span class="line">        height: @size * 0.5;</span><br><span class="line">    &#125;</span><br><span class="line">    [data-dpr=&quot;3&quot;] &amp; &#123;</span><br><span class="line">        width: @size * 1.5;</span><br><span class="line">        height: @size * 1.5;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// less </span><br><span class="line">/*@size 建议取双数*/</span><br><span class="line">.circle(@size, @backgroundColor) &#123;  </span><br><span class="line">    width: @size;</span><br><span class="line">    height: @size;</span><br><span class="line">    background-color: @backgroundColor;</span><br><span class="line">    [data-dpr=&quot;1&quot;] &amp; &#123;</span><br><span class="line">        width: @size * 0.5;</span><br><span class="line">        height: @size * 0.5;</span><br><span class="line">    &#125;</span><br><span class="line">    [data-dpr=&quot;3&quot;] &amp; &#123;</span><br><span class="line">        width: @size * 1.5;</span><br><span class="line">        height: @size * 1.5;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p><strong>1px 细线问题</strong></p>
 <p>这个问题下面我会单独做一小节讲，在这里就不累述。</p>
 <p><strong>字体大小（基本都是用 rem 作为单位）</strong></p>
@@ -133,7 +416,7 @@
 <p>一般建议在 <code>line-height</code> 使用 em。因为在需要调整字体大小的时候，只需修改 <code>font-size</code> 的值，而 <code>line-height</code> 已经设置成了相对行高了。</p>
 <p><strong>首行缩进两个字符</strong></p>
 <p>在存在首行缩进的需求，我也会使用这个单位。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">text-indent: 2em</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">text-indent: 2em</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <h4 id="视口单位-vw-vh"><a href="#视口单位-vw-vh" class="headerlink" title="视口单位 vw | vh"></a>视口单位 vw | vh</h4><blockquote>
 <p>vw: 1vw = 视口宽度的 1%<br> vh: 1vh = 视口高度的 1%</p>
 </blockquote>
@@ -143,10 +426,10 @@
 <p>答案就是视口单位 vw | vh。</p>
 </blockquote>
 <p>以下就是前人给出的使用方案：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$vm_fontsize: 75;</span><br><span class="line">@function rem($px) &#123;</span><br><span class="line">     @return ($px / $vm_fontsize ) * 1rem;</span><br><span class="line">&#125;</span><br><span class="line">$vm_design: 750;</span><br><span class="line">html &#123;</span><br><span class="line">    font-size: ($vm_fontsize / ($vm_design / 2)) * 100vw; </span><br><span class="line">    @media screen and (max-width: 320px) &#123;</span><br><span class="line">        font-size: 64px;</span><br><span class="line">    &#125;</span><br><span class="line">    @media screen and (min-width: 540px) &#123;</span><br><span class="line">        font-size: 108px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小</span><br><span class="line">body &#123;</span><br><span class="line">    max-width: 540px;</span><br><span class="line">    min-width: 320px;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$vm_fontsize: 75;</span><br><span class="line">@function rem($px) &#123;</span><br><span class="line">     @return ($px / $vm_fontsize ) * 1rem;</span><br><span class="line">&#125;</span><br><span class="line">$vm_design: 750;</span><br><span class="line">html &#123;</span><br><span class="line">    font-size: ($vm_fontsize / ($vm_design / 2)) * 100vw; </span><br><span class="line">    @media screen and (max-width: 320px) &#123;</span><br><span class="line">        font-size: 64px;</span><br><span class="line">    &#125;</span><br><span class="line">    @media screen and (min-width: 540px) &#123;</span><br><span class="line">        font-size: 108px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小</span><br><span class="line">body &#123;</span><br><span class="line">    max-width: 540px;</span><br><span class="line">    min-width: 320px;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <h3 id="4-合理使用变量"><a href="#4-合理使用变量" class="headerlink" title="4. 合理使用变量"></a>4. 合理使用变量</h3><p>一般设计稿中的某一类的文字（元素）都是用相同的字体大小、颜色、行高等样式属性，所以这些值我们不必每次都重复写，因为当 UI 更新设计方案，你需要改的地方就很多了。这些重复使用的值我们完全可以存放在变量里面。</p>
 <p>Sass 和 Less 稍微有点区别：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// sass</span><br><span class="line">$direction: left;</span><br><span class="line">// less</span><br><span class="line">@direction: left;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// sass</span><br><span class="line">$direction: left;</span><br><span class="line">// less</span><br><span class="line">@direction: left;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p>当然 CSS 原生也是存在变量的，使用规则如下：</p>
 <blockquote>
 <p>变量定义的语法是： –<em>；  //  </em>为变量名称。 变量使用的语法是：var(*)；</p>
@@ -155,26 +438,26 @@
 <li>无论是变量的定义和使用只能在声明块 {} 里面</li>
 <li>CSS 变量字符限制为： [0-9]、[a-zA-Z]、_、-、中文和韩文等。</li>
 </ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:root &#123;</span><br><span class="line">    --blue_color: #3388ff;</span><br><span class="line">    --main_bgcolor: #fafafa;</span><br><span class="line">    --font_size_12: 12px;</span><br><span class="line">    --font_size_14: 14px;</span><br><span class="line">    --color: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.div1&#123;</span><br><span class="line">    background-color: var(--main_bgcolor);</span><br><span class="line">    font-size: var(--font_size_12);</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:root &#123;</span><br><span class="line">    --blue_color: #3388ff;</span><br><span class="line">    --main_bgcolor: #fafafa;</span><br><span class="line">    --font_size_12: 12px;</span><br><span class="line">    --font_size_14: 14px;</span><br><span class="line">    --color: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.div1&#123;</span><br><span class="line">    background-color: var(--main_bgcolor);</span><br><span class="line">    font-size: var(--font_size_12);</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <h3 id="5-使用-Mixin-归类重复样式"><a href="#5-使用-Mixin-归类重复样式" class="headerlink" title="5. 使用 Mixin 归类重复样式"></a>5. 使用 Mixin 归类重复样式</h3><p>和重复变量一样，重复的样式也可以归类。我觉得优秀的代码其中有一条肯定是代码的复用性强。</p>
 <p>之前我们写 CSS 的时候，也会将一些重复使用的代码放在一个 class 中，这样的确达到了一定的复用性，不过最后的效果可能就是在一个元素里面放了很多 class，如下图：</p>
 <p><img src="data:image/svg+xml;utf8,&lt;?xml version=&quot;1.0&quot;?&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;536&quot; height=&quot;135&quot;&gt;&lt;/svg" alt="img"></p>
 <p>这样下一个接手得人难免会有点迷糊，而且这样会造成样式越来越难修改。</p>
 <p>这个时候，mixin( 可以理解成 class 中的 class )就能发挥它的作用了。</p>
 <p>这是一个描述性文字的样式：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.font-description &#123;</span><br><span class="line">    .font-des-style(24px,#fff,1.5em);</span><br><span class="line">    .line-camp(2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// less</span><br><span class="line">/* 多行显示 */</span><br><span class="line">.line-camp( @clamp:2 ) &#123;</span><br><span class="line">    text-overflow: -o-ellipsis-lastline;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: @clamp;</span><br><span class="line">    -webkit-box-orient: vertical; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.font-des-style( @fontSize, @color, @lineHeight, @textAlign:left ) &#123;</span><br><span class="line">    font-size: @fontSize;</span><br><span class="line">    color: @color;</span><br><span class="line">    line-height: @lineHeight;</span><br><span class="line">    text-align: @textAlign;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.font-description &#123;</span><br><span class="line">    .font-des-style(24px,#fff,1.5em);</span><br><span class="line">    .line-camp(2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// less</span><br><span class="line">/* 多行显示 */</span><br><span class="line">.line-camp( @clamp:2 ) &#123;</span><br><span class="line">    text-overflow: -o-ellipsis-lastline;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: @clamp;</span><br><span class="line">    -webkit-box-orient: vertical; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.font-des-style( @fontSize, @color, @lineHeight, @textAlign:left ) &#123;</span><br><span class="line">    font-size: @fontSize;</span><br><span class="line">    color: @color;</span><br><span class="line">    line-height: @lineHeight;</span><br><span class="line">    text-align: @textAlign;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p>这只是一个简单的例子，我们可以把可复用的样式放在 mixin 中，这样接手项目的人只需要熟悉你写的 mixin.less 就可以开始迭代需求了。</p>
 <h3 id="6-1px-方案"><a href="#6-1px-方案" class="headerlink" title="6. 1px 方案"></a>6. 1px 方案</h3><p>做过移动端需求的前端肯定是避免不了处理 <code>1px</code> 细线问题，这个问题的原因就是 UI 对页面美观度的要求越来越高（不要和我说这是 retina 屏的问题）。</p>
 <p>据小生所知好像没有什么兼容性特别好的方案，这里我只是提供两种种相对较好的方案。</p>
-<h4 id="使用伪类-transform"><a href="#使用伪类-transform" class="headerlink" title="使用伪类 + transform"></a>使用伪类 + transform</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.border_bottom &#123; </span><br><span class="line">    overflow: hidden; </span><br><span class="line">    position: relative; </span><br><span class="line">    border: none!important; </span><br><span class="line">&#125;</span><br><span class="line">.border_bottom:after &#123; </span><br><span class="line">    content: &quot;.&quot;;</span><br><span class="line">    position: absolute; </span><br><span class="line">    left: 0; </span><br><span class="line">    bottom: 0; </span><br><span class="line">    width: 100%; </span><br><span class="line">    height: 1px; </span><br><span class="line">    background-color: #d4d6d7; </span><br><span class="line">    -webkit-transform-origin: 0 0;  </span><br><span class="line">    transform-origin: 0 0; </span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    transform: scaleY(0.5);</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<h4 id="使用伪类-transform"><a href="#使用伪类-transform" class="headerlink" title="使用伪类 + transform"></a>使用伪类 + transform</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.border_bottom &#123; </span><br><span class="line">    overflow: hidden; </span><br><span class="line">    position: relative; </span><br><span class="line">    border: none!important; </span><br><span class="line">&#125;</span><br><span class="line">.border_bottom:after &#123; </span><br><span class="line">    content: &quot;.&quot;;</span><br><span class="line">    position: absolute; </span><br><span class="line">    left: 0; </span><br><span class="line">    bottom: 0; </span><br><span class="line">    width: 100%; </span><br><span class="line">    height: 1px; </span><br><span class="line">    background-color: #d4d6d7; </span><br><span class="line">    -webkit-transform-origin: 0 0;  </span><br><span class="line">    transform-origin: 0 0; </span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    transform: scaleY(0.5);</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p>当然这个方案在一些版本较低的机型也是会出现粗细不均、细线消失断裂的兼容性问题。不过现在在已经 2019 年了，版本较低的机型也淘汰的差不多了。</p>
-<h4 id="使用-box-shadow-模拟"><a href="#使用-box-shadow-模拟" class="headerlink" title="使用 box-shadow 模拟"></a>使用 box-shadow 模拟</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.border_bottom &#123;</span><br><span class="line">  box-shadow: inset 0px -1px 1px -1px #d4d6d7;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<h4 id="使用-box-shadow-模拟"><a href="#使用-box-shadow-模拟" class="headerlink" title="使用 box-shadow 模拟"></a>使用 box-shadow 模拟</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.border_bottom &#123;</span><br><span class="line">  box-shadow: inset 0px -1px 1px -1px #d4d6d7;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p>这个方案基本可以满足所有场景，不过有个缺点也就是颜色会变浅。</p>
 <p><strong>多谢 D文斌 分享的另一种方案：</strong> 这种方案对 dpr 做了不同的处理，可谓更加精细。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">.min-device-pixel-ratio(@scale2, @scale3) &#123;</span><br><span class="line">  @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) &#123;</span><br><span class="line">    transform: @scale2;</span><br><span class="line">  &#125;</span><br><span class="line">  @media screen and (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) &#123;</span><br><span class="line">    transform: @scale3;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.border-1px(@color: #DDD, @radius: 2PX, @style: solid) &#123;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    pointer-events: none;</span><br><span class="line">    display: block;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    transform-origin: 0 0;</span><br><span class="line">    border: 1PX @style @color;</span><br><span class="line">    border-radius: @radius;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) &#123;</span><br><span class="line">      width: 200%;</span><br><span class="line">      height: 200%;</span><br><span class="line">      border-radius: @radius * 2;</span><br><span class="line">      transform: scale(.5);</span><br><span class="line">    &#125;</span><br><span class="line">    @media screen and (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) &#123;</span><br><span class="line">      width: 300%;</span><br><span class="line">      height: 300%;</span><br><span class="line">      border-radius: @radius * 3;</span><br><span class="line">      transform: scale(.33);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.border-top-1px(@color: #DDD, @style: solid) &#123;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    width: 100%;</span><br><span class="line">    border-top: 1Px @style @color;</span><br><span class="line">    transform-origin: 0 0;</span><br><span class="line">    .min-device-pixel-ratio(scaleY(.5), scaleY(.33));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">.min-device-pixel-ratio(@scale2, @scale3) &#123;</span><br><span class="line">  @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) &#123;</span><br><span class="line">    transform: @scale2;</span><br><span class="line">  &#125;</span><br><span class="line">  @media screen and (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) &#123;</span><br><span class="line">    transform: @scale3;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.border-1px(@color: #DDD, @radius: 2PX, @style: solid) &#123;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    pointer-events: none;</span><br><span class="line">    display: block;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    transform-origin: 0 0;</span><br><span class="line">    border: 1PX @style @color;</span><br><span class="line">    border-radius: @radius;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) &#123;</span><br><span class="line">      width: 200%;</span><br><span class="line">      height: 200%;</span><br><span class="line">      border-radius: @radius * 2;</span><br><span class="line">      transform: scale(.5);</span><br><span class="line">    &#125;</span><br><span class="line">    @media screen and (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) &#123;</span><br><span class="line">      width: 300%;</span><br><span class="line">      height: 300%;</span><br><span class="line">      border-radius: @radius * 3;</span><br><span class="line">      transform: scale(.33);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.border-top-1px(@color: #DDD, @style: solid) &#123;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    width: 100%;</span><br><span class="line">    border-top: 1Px @style @color;</span><br><span class="line">    transform-origin: 0 0;</span><br><span class="line">    .min-device-pixel-ratio(scaleY(.5), scaleY(.33));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <h3 id="7-从-html-元素继承-box-sizing"><a href="#7-从-html-元素继承-box-sizing" class="headerlink" title="7. 从 html 元素继承 box-sizing"></a>7. 从 html 元素继承 box-sizing</h3><p>在大多数情况下我们在设置元素的 <code>border</code> 和 <code>padding</code> 并不希望改变元素的 <code>width,height</code> 值，这个时候我们就可以为该元素设置 <code>box-sizing:border-box;</code>。</p>
 <p>我不希望每次都重写一遍，而是希望他是继承而来的，那么我们可以使用如下代码：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">html &#123;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">*, *:before, *:after &#123;</span><br><span class="line">  box-sizing: inherit;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">html &#123;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">*, *:before, *:after &#123;</span><br><span class="line">  box-sizing: inherit;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p>这样的好处在于他不会覆盖其他组件的 <code>box-sizing</code> 值，又无需为每一个元素重复设置 <code>box-sizing: border-box;</code>。</p>
 <h3 id="8-内联首屏关键-CSS"><a href="#8-内联首屏关键-CSS" class="headerlink" title="8. 内联首屏关键 CSS"></a>8. 内联首屏关键 CSS</h3><p>性能优化中有一个重要的指标 —— 首次有效绘制（FMP），即指页面的首要内容（primary content）出现在屏幕上的时间。这一指标影响用户看到页面前所需等待的时间，而 <strong>内联首屏关键 CSS（即 Critical CSS，可以称之为首屏关键 CSS）</strong> 能给用户一个更好的心理预期。</p>
 <p>如图：</p>
@@ -184,168 +467,403 @@
 <p>既然是内联关键 CSS，也就说明我们只会将少部分的 CSS 代码直接写入 HTML 中。至于内联哪些 CSS 你可以使用 Critical。</p>
 </blockquote>
 <h3 id="9-文字超出省略、文字两端对齐"><a href="#9-文字超出省略、文字两端对齐" class="headerlink" title="9. 文字超出省略、文字两端对齐"></a>9. 文字超出省略、文字两端对齐</h3><p>需求中我们也经常遇到这样的需求，这里直接提供方案。</p>
-<h4 id="超出省略"><a href="#超出省略" class="headerlink" title="超出省略"></a>超出省略</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.line-camp( @clamp:2 ) &#123;</span><br><span class="line">    text-overflow: -o-ellipsis-lastline;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: @clamp;</span><br><span class="line">    -webkit-box-orient: vertical; </span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></div>
+<h4 id="超出省略"><a href="#超出省略" class="headerlink" title="超出省略"></a>超出省略</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.line-camp( @clamp:2 ) &#123;</span><br><span class="line">    text-overflow: -o-ellipsis-lastline;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: @clamp;</span><br><span class="line">    -webkit-box-orient: vertical; </span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 <p><strong>所遇到的问题：</strong></p>
 <blockquote>
 <p><code>-webkit-box-orient: vertical</code> 在使用 webpack 打包的时候这段代码会被删除掉，原因是  <code>optimize-css-assets-webpack-plugin</code> 这个插件的问题。</p>
 </blockquote>
 <p><strong>解决方案：</strong></p>
 <p>可以使用如下的写法：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.line-camp( @clamp:2 ) &#123;</span><br><span class="line">    text-overflow: -o-ellipsis-lastline;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: @clamp;</span><br><span class="line">    /*! autoprefixer: off */</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    /* autoprefixer: on */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.line-camp( @clamp:2 ) &#123;</span><br><span class="line">    text-overflow: -o-ellipsis-lastline;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: @clamp;</span><br><span class="line">    /*! autoprefixer: off */</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    /* autoprefixer: on */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     
-      <footer class="article-footer">
-        完
-      </footer>
     
-  </div>
-  
     
-<nav id="article-nav">
-  <div class="article-nav-block">
+
     
-      <a href="/2019/05/26/关于http的文章/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            http协议
-          
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/10/DOM-相关/" rel="next" title="DOM 相关">
+                <i class="fa fa-chevron-left"></i> DOM 相关
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/26/关于http的文章/" rel="prev" title="http协议">
+                http协议 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/04/10/DOM-相关/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">DOM 相关</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
+      
 
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-<script src="https://jjeejj.github.io/js/gitment.js"></script>
-<script>
-  var gitment = new Gitment({
-    owner: '1695365384',
-    repo: 'https://1695365384.github.io',
-    oauth: {
-      client_id: '02c87f5cc26985f426a8',
-      client_secret: '8e535924bf60f096386a5ea5f3d868a94b2162ce',
-    },
-  })
-  gitment.render('gitmentContainer')
-</script>
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
 
   
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
   
-</article>
-</section>
-        <aside id="sidebar">
+
+
+
+        </div>
+        
+          
   
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.jpeg" title="图片来自网络"></img>
-    <h3 class="avatar-name">
-      
-        半城狂沙
-      
-    </h3>
-    <p class="avatar-slogan">
-      来自一个特别菜鸡的小前端的小小博客
-    </p>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/44278926?s=460&v=4" alt="bundy">
+            
+              <p class="site-author-name" itemprop="name">bundy</p>
+              <p class="site-description motion-element" itemprop="description">前端路漫漫,切勿急求成</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#9-个-CSS-技巧"><span class="nav-number">1.</span> <span class="nav-text">9 个 CSS 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-建议使用-padding-代替-margin"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 建议使用 padding 代替 margin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-position-fixed-降级问题"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. position:fixed 降级问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-合理使用-px-em-rem-等单位"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 合理使用 px | em | rem | % 等单位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础单位-px"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">基础单位 px</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相对单位-rem"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">相对单位 rem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相对单位-em"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">相对单位 em</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视口单位-vw-vh"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">视口单位 vw | vh</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-合理使用变量"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 合理使用变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-使用-Mixin-归类重复样式"><span class="nav-number">1.0.5.</span> <span class="nav-text">5. 使用 Mixin 归类重复样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1px-方案"><span class="nav-number">1.0.6.</span> <span class="nav-text">6. 1px 方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用伪类-transform"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">使用伪类 + transform</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-box-shadow-模拟"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">使用 box-shadow 模拟</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-从-html-元素继承-box-sizing"><span class="nav-number">1.0.7.</span> <span class="nav-text">7. 从 html 元素继承 box-sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-内联首屏关键-CSS"><span class="nav-number">1.0.8.</span> <span class="nav-text">8. 内联首屏关键 CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-文字超出省略、文字两端对齐"><span class="nav-number">1.0.9.</span> <span class="nav-text">9. 文字超出省略、文字两端对齐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#超出省略"><span class="nav-number">1.0.9.1.</span> <span class="nav-text">超出省略</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">bundy</span>
+
+  
 </div>
 
 
-  
-    
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/07/14/react/">React笔记一</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/03/关于对象的六种继承方法继承的优点与缺点总结/">关于对象的六种继承方法继承的优点与缺点总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/03/node操作MySQL的一些方法/">关于node中关于mysql的一些方法总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/31/一些状态响应码的含义/">关于http请求中的状态码含义</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/29/01-ES6笔记/">ES6特性</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  <span class="post-meta-divider">|</span>
 
-  
-</aside>
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
       </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2019 bundy &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
-</footer>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
   
-    <a href="/" class="mobile-nav-link">首页</a>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">归档</a>
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://Bundy.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2019/05/23/九个常见的css问题技巧/';
+          this.page.identifier = '2019/05/23/九个常见的css问题技巧/';
+          this.page.title = '九个常见的css技巧';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Bundy.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
